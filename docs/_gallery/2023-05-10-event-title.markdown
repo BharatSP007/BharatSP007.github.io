@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: album
 title:  "Event Title"
 background: album
 event_id: event-title

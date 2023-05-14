@@ -1,0 +1,39 @@
+---
+layout: page
+---
+
+<div class="post-content e-content" itemprop="articleBody">
+  {{ content }}
+</div>
+
+<a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+
+
+
+
+{%- if page.location contains 'http' -%}
+{%- assign domain = '' -%}
+{%- else -%}
+{%- assign domain = site.url -%}
+{% endif %}
+
+<div class="album-grid">
+{% assign image_files = site.static_files | where: "album", true %}
+{% for image in image_files %}
+{% if image.path contains page.event_id %}
+{% if image.path contains "thumbs" %}
+  <div class="album-image-container">
+    <!--<picture>
+      <source srcset=”images/frog.AVIF” type=”image/AVIF”>
+      <source srcset="images/frog.webp" type="image/webp">
+      <img src=" images/frog.jpg" alt="frog">
+      </picture>-->
+      <img src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.path}}" class="album-thumb" data-full-size="{{ domain }}{{ page.location }}{{ image.name }}">
+   </div>
+   {% endif %}
+{% endif %}
+{% endfor %}
+
+
+
+</div>
