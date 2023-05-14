@@ -377,37 +377,46 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 200px;
   @include media(desktop){
     height: 200px;
   }
 }
-.post-list > li {
-  display: inline-block;
-  width: calc(33% - 35px);
-  vertical-align: text-top;
-  height: 320px;
-  overflow: hidden;
-  position: relative;
-  transform: translateY(0px);
-  transition: transform 100ms;
-}
-.post-list > li:hover{
-  transform: translateY(-10px);
-  transition: transform 100ms;
-}
-.post-list-fade-out{
-  width: 100%;
-  height: 50px;
-  position: absolute;
-  bottom: 0;
-  background-image: linear-gradient(transparent, white);
-  box-sizing: border-box;
-}
 
+.post-list {
+ 
+  
+  
+  > li {
+  
+  margin-left: 0;
+  margin-right: 0;
+  background-color: $brand-color;
+  
+  @include media(desktop){
+    display: inline-block;
+    width: calc(33% - 35px);
+    vertical-align: text-top;
+    height: 320px;
+    overflow: hidden;
+    position: relative;
+    transform: translateY(0);
+    transition: transform 100ms;
+    & :hover{
+      transform: translateY(-10px);
+      transition: transform 100ms;
+    }
+  }
+  p{
+    margin: 0;
+    padding: 4px 8px;
+  }
+  a{
+    color: $background-color;
+    text-decoration: none;
+  }
+}}
 
-.post-list p {
-  font-size: 14px;
-}
 
 
 .album-grid{

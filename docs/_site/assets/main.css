@@ -1636,6 +1636,7 @@ button:hover {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 200px;
 }
 @media (min-width: 960px) {
   .grid-post-image {
@@ -1644,32 +1645,33 @@ button:hover {
 }
 
 .post-list > li {
-  display: inline-block;
-  width: calc(33% - 35px);
-  vertical-align: text-top;
-  height: 320px;
-  overflow: hidden;
-  position: relative;
-  transform: translateY(0px);
-  transition: transform 100ms;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #385396;
 }
-
-.post-list > li:hover {
-  transform: translateY(-10px);
-  transition: transform 100ms;
+@media (min-width: 960px) {
+  .post-list > li {
+    display: inline-block;
+    width: calc(33% - 35px);
+    vertical-align: text-top;
+    height: 320px;
+    overflow: hidden;
+    position: relative;
+    transform: translateY(0);
+    transition: transform 100ms;
+  }
+  .post-list > li :hover {
+    transform: translateY(-10px);
+    transition: transform 100ms;
+  }
 }
-
-.post-list-fade-out {
-  width: 100%;
-  height: 50px;
-  position: absolute;
-  bottom: 0;
-  background-image: linear-gradient(transparent, white);
-  box-sizing: border-box;
+.post-list > li p {
+  margin: 0;
+  padding: 4px 8px;
 }
-
-.post-list p {
-  font-size: 14px;
+.post-list > li a {
+  color: #fdfdfd;
+  text-decoration: none;
 }
 
 .album-grid {
