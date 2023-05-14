@@ -1,0 +1,144 @@
+.lightbox-container {
+
+  display: block;
+  transform: translateY(-200%);
+  transition: transform 300ms;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.938);
+  z-index: 9999;
+  vertical-align: middle;
+  #lightbox-next {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+  }
+  #lightbox-previous {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+  }
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  > img {
+    touch-action: none;
+    position: absolute;
+    max-height: 60%;
+    max-width: 60%;
+    width: auto;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 100ms;
+  }
+  #lightbox-thumbnails {border: 1px solid transparent;
+
+    height: 100px;
+    width: 60%;
+    position: absolute;
+    bottom: 10px;
+    left: calc(20% - 50px);
+    padding: 0 50px 0 50px;
+   
+   
+
+    transform: scale(0.2);
+    transition: transform 300ms ease-in-out 500ms;
+    button {
+        display: block;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 300ms ease-in-out 500ms;
+        background-color: transparent;
+   
+        border: none;
+        color: $brand-color;
+        i{
+          transition: transform 100ms;
+          transform: scale(1.5);
+        }
+    }
+    #thumb-next{
+        right: 0;
+    }
+    #thumb-prev{
+        left: 0;
+    }
+    #thumb-list {
+      height: calc(100% - 10px);
+      width: 100%;
+      padding: 10px 0 10px 0;
+      white-space: nowrap;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+      position: relative;
+      img {
+        outline: 4px solid transparent;
+       
+        height: calc(100% - 4px);
+        width: auto;
+        margin: 0 calc(#{$spacing-unit} / 4) 0 calc(#{$spacing-unit} / 4);
+        cursor: pointer;
+        &.active{
+          outline-color: $brand-color;
+        }
+      
+      }
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      
+      /* Hide scrollbar for IE, Edge and Firefox */
+      
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    &:hover {
+      transition: transform 300ms ease-in-out 0s;
+      transform: scale(1);
+      &>button{
+        opacity: 1;
+        transition: opacity 300ms ease-in-out 0s;
+       &:hover{
+        >i{
+          
+        transform: scale(2);
+       }
+      }
+      &#thumb-prev{
+      &:active{
+        >i{
+          
+          transform: translateX(-2px) scale(2);
+         } 
+      }}
+      &#thumb-next{
+        &:active{
+          >i{
+            
+            transform: translateX(2px) scale(2);
+           } 
+        }}
+      }
+    }
+    
+  }
+  &.visible{
+    transform: translateY(0);
+    > img {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+}

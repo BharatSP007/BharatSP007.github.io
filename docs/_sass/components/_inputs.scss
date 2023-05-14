@@ -1,0 +1,56 @@
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  display: block;
+  padding: 8px;
+  margin: 0 0 $spacing-unit 0;
+  box-sizing: border-box;
+  resize: vertical;
+  font-size: $base-font-size;
+ 
+}
+button{
+    padding: 8px calc(#{$spacing-unit} /2 ) 8px calc(#{$spacing-unit} /2 );
+    background-color: $brand-color;
+    color: $background-color;
+    outline: none;
+    border: 1px solid $brand-color;
+    cursor: pointer;
+    &[type="submit"] {
+        line-height:$base-line-height;
+        vertical-align:middle;
+        width: fit-content;
+        font-size: $base-font-size;
+        i{
+            
+            display: inline;
+            margin-right: calc(#{$spacing-unit} /2 );
+            vertical-align:middle;
+        }
+        font-family: $base-font-family;
+      }
+
+      &:hover{
+        background-color: $background-color;
+        color: $brand-color;
+      }
+}
+.prefixed-input {
+  display: block;
+  position: relative;
+  input {
+    display: inline;
+    padding-left: $base-font-size * 2;
+  }
+  span {
+    display: block;
+    padding: 2px 0 0 8px;
+    left: 0;
+    position: absolute;
+    color: $grey-color;
+  } 
+}

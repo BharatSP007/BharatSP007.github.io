@@ -1,0 +1,83 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ " /" | relative_url }}"></data>
+
+  <div class="wrapper">
+
+    <!-- <h2 class="footer-heading">{{ site.title | escape }}</h2> -->
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <h3>Quick Links</h3>
+        <ul class="quicklinks">
+          {% for link in site.data.quicklinks %}
+
+          {% if link.url contains 'http' %}
+          {% assign domain = '' %}
+          {% assign _baseurl = '' %}
+          {% elsif link.url == '#' %}
+          {% assign domain = '' %}
+          {% assign _baseurl = site.baseurl %}
+          {% else %}
+          {% assign domain = site.url %}
+          {% assign _baseurl = site.baseurl %}
+          {% endif %}
+
+          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="footer-col footer-col-2">
+        <h3>Contact Us</h3>
+        <ul class="contact-list">
+         <!-- <li class="p-name">
+            {%- if site.author -%}
+            {{ site.author | escape }}
+            {%- else -%}
+            {{ site.title | escape }}
+            {%- endif -%}
+          </li>-->
+          {%- if site.phone -%}
+          <li><i class="material-icons-round">call</i>
+            <span><a class="u-phone" href="tel:{{ site.phone }}">{{ site.phone }}</a>
+            {%- if site.phone -%}
+            , <a class="u-phone" href="tel:{{ site.phone-secondary }}">{{ site.phone-secondary }}</a>
+            {%- endif -%}
+          </span>
+          </li>
+          {%- endif -%}
+          {%- if site.email -%}
+          <li><i class="material-icons-round">email</i> <span> <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a> </span></li>
+          {%- endif -%}
+       
+          {%- if site.address1 -%}
+       
+          <li>
+            <i class="material-icons-round for-multiline">place</i> 
+            <span>
+           {{ site.address1 }}
+            {%- if site.locality -%}
+            <div> {{ site.locality }}</div>
+            {%- endif -%}
+            {%- if site.state -%}
+            <div>{{ site.state }},&nbsp; {%- if site.pin -%} {{ site.pin }} {%- endif -%}</div>
+            {%- endif -%}
+            </span>
+          </li>
+          {%- endif -%}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <!--
+        <h3>Engage</h3>
+        {%- include social.html -%}
+           -->
+        <img src="/assets/logo.png">
+      </div>
+
+
+    </div>
+
+  </div>
+  <div class="copyright">Copyright © 2023 Sree Narayana Guru College of Advanced Studies, Mezhuveli. All Rights Reserved
+  </div>
+</footer>

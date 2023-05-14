@@ -1,0 +1,114 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+  <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  <div class="head-carousel">
+   
+  </div>
+  {% if site.data.updates %}
+  <div class="marquee-section">
+    <div class="marquee-container">
+      <div class="marquee-title">Latest Updates</div>
+      <div class="marquee-strip">
+        <div class="marquee">
+          
+          {% for update in site.data.updates %}
+          <a href="{{ update.url }}">&#8226; {{ update.content }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <div>
+    <div class="welcome">
+      {{ site.data.updates.size }}
+      <h2>Welcome to SNGCAS, Mezhuveli</h2>
+      <p>Learn in a supportive environment where students can attain comprehensive growth and build lifelong connections. We, ever since our inception, have been doing our utmost to ensure that we enable each one of our students to play a dynamic role in the nation building process and the advancement of humanity.</p>
+  
+    </div>
+    <div class="features-section">
+      <h2>Unique Features</h2>
+      <div class="feature-grid">
+        <div>
+          <div><i class="material-symbols-rounded">nature</i> Tranquil Atmosphere</div>
+
+
+          <div><i class="material-symbols-rounded">co_present</i> Supportive Professors</div>
+
+
+          <div><i class="material-symbols-rounded">auto_meeting_room</i> Ample Facilities</div>
+        </div>
+        <div>
+
+          <div><i class="material-symbols-rounded">school</i> Excellent Results</div>
+
+
+          <div><i class="material-symbols-rounded">metabolism</i> Comprehensive Education</div>
+
+
+          <div><i class="material-symbols-rounded">visibility</i> No Additional Fees</div>
+        </div>
+      </div>
+    </div>
+    <!--
+    <div class="container">
+      <h2>Key People</h2>
+      <div class="people-grid">
+        <div class="key-person" style="background-image: url('assets/person1.jpg');">
+          <div class="person-info">
+            <h3>Mx. Name Surname</h3>
+            <h4>Position</h4>
+          </div>
+        </div>
+        <div class="key-person" style="background-image: url('assets/person2.jpg');">
+          <div class="person-info">
+            <h3>Mx. Name Surname</h3>
+            <h4>Position</h4>
+          </div>
+        </div>
+        <div class="key-person" style="background-image: url('assets/person3.jpg');">
+          <div class="person-info">
+            <h3>Mx. Name Surname</h3>
+            <h4>Position</h4>
+          </div>
+        </div>
+      </div>
+      <a>All Faculty -></a>
+    </div>
+-->
+    <div>
+
+    </div>
+  </div>
+  {{ content }}
+  <!--
+  {%- if site.posts.size > 0 -%}
+  <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+  <ul class="post-list">
+    {%- for post in site.posts -%}
+    <li>
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      <span class="post-meta">{{ post.date | date: date_format }}</span>
+      <h3>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+      </h3>
+      {%- if site.show_excerpts -%}
+      {{ post.excerpt }}
+      {%- endif -%}
+    </li>
+    {%- endfor -%}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ " /feed.xml" | relative_url }}">via RSS</a></p>
+  {%- endif -%}
+-->
+</div>

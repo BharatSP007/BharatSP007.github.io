@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+
+//$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+//$base-font-family: 'EB Garamond', serif;
+//$head-font-family:  'Playfair Display SC', serif;
+
+$base-font-family: 'Outfit', sans-serif;
+//$head-font-family:  'Josefin Sans', sans-serif;
+
+$base-font-size:   18px !default;
+$base-font-weight: 300 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$large-font-size:  $base-font-size * 2 !default;
+$x-large-font-size:  $base-font-size * 4 !default;
+$base-line-height: 2 !default;
+$narrow-line-height: 1.5;
+$nav-font-size: $base-font-size * 1.1 !default;
+$nav-font-weight: 700 !default;
+
+
+$spacing-unit:     30px !default;
+
+$text-color:       #111 !default;
+$ok-color: #1fb91f !default;
+$error-color: #ca1c1c !default;
+$background-color: #fdfdfd !default;
+$brand-color:      #385396 !default;
+$brand-color-secondary:      #38734a !default;
+$lightness: 0.5 !default;
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+$disabled-text-color: lighten($grey-color, 25%) !default;
+$topbar-dropdown-bg: #fdfdfd !default;
+$topbar-link-color: #2a7ae2 !default;
+$table-text-align: left !default;
+
+// Width of the content area
+$content-width:    100% !default;
+
+$on-palm:          600px !default;
+$on-laptop:        1024px !default;
+
+$topbar-transition-speed: 300ms !default;
+
+$topbar-divider-border-top: solid 0px scale-color($brand-color, $lightness: -50%);
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: calc(#{$spacing-unit} / 2);
+//     padding-left: calc(#{$spacing-unit} / 2);
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+//  map holding breakpoint values
+$breakpoints: (
+  mobile : 0px, 
+  tablet : 680px, 
+  desktop: 960px
+);
+
+//  mixin to print out media queries (based on map keys passed) 
+@mixin media($keys...){
+  @each $key in $keys { 
+    @media (min-width: map-get($breakpoints, $key)){
+      @content
+    } 
+  }
+}
+//  map holding breakpoint values
+$breakpoints-max: (
+  mobile : 680px, 
+  tablet : 960px
+);
+
+//  mixin to print out media queries (based on map keys passed) 
+@mixin media-max($keys...){
+  @each $key in $keys { 
+    @media (max-width: map-get($breakpoints-max, $key)){
+      @content
+    } 
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// @mixins
+//
+// We use this to add transitions to elements
+// $property - Default: all, Options: http://www.w3.org/TR/css3-transitions/#animatable-properties
+// $speed - Default: 300ms
+// $ease - Default:ease-out, Options: http://css-tricks.com/almanac/properties/t/transition-timing-function/
+@mixin single-transition($property:all, $speed:300ms, $ease:ease-out) {
+  transition: $property $speed $ease;
+}
+
+
+// @mixins
+//
+// We use this to create the icon with three lines aka the hamburger icon, the menu-icon or the navicon
+// $width - Width of hamburger icon in rem
+// $left - If false, icon will be centered horizontally || explicitly set value in rem
+// $top - If false, icon will be centered vertically || explicitly set value in rem
+// $thickness - thickness of lines in hamburger icon, set value in px
+// $gap - spacing between the lines in hamburger icon, set value in px
+// $color - icon color
+// $hover-color - icon color during hover
+// $offcanvas - Set to true of @include in offcanvas
+@mixin hamburger($width, $left, $top, $thickness, $gap, $color, $hover-color, $offcanvas) {
+  span::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 0;
+
+    @if $offcanvas {
+      @if $top {
+        top: $top;
+      }
+      @else {
+        top: 50%;
+        margin-top: (-$width/2);
+      }
+      @if $left {
+        left: $left;
+      }
+      @else {
+        left: ($tabbar-menu-icon-width - $width)/2;
+      }
+    }
+    @else {
+      top: 50%;
+      margin-top: -($width/2);
+      #{$opposite-direction}: $topbar-link-padding;
+    }
+
+    box-shadow:
+      0 0 0 $thickness $color,
+      0 $gap + $thickness 0 $thickness $color,
+      0 (2 * $gap + 2*$thickness) 0 $thickness $color;
+    width: $width;
+  }
+  span:hover:after {
+    box-shadow:
+      0 0 0 $thickness $hover-color,
+      0 $gap + $thickness 0 $thickness $hover-color,
+      0 (2 * $gap + 2*$thickness) 0 $thickness $hover-color;
+  }
+}
+
+
+// Import partials.
+@import
+  "minima/base",
+  "minima/layout",
+  "minima/syntax-highlighting"
+;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap');
+

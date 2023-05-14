@@ -1,0 +1,14 @@
+- title: Home
+  url: "/"
+
+- title: Tuition Fees
+  url: "/academics/tuition_fees"
+
+#- title: Gallery
+ # url: "/gallery/"
+
+- title: About Us
+  url: "/college/about"
+
+- title: Contact
+  url: "/contact/"

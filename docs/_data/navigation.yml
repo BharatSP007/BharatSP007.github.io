@@ -1,0 +1,29 @@
+- title: Home
+  url: "/"
+  side: right
+
+- title: "Academics"
+  url: "javascript:void(0);"
+  side: right
+  dropdown:
+  - title: "Programmes Offered"
+    url: "/academics/programmes_offered"
+  - title: "Tuition Fees"
+    url: "/academics/tuition_fees"
+
+ 
+- title: "College"
+  url: "javascript:void(0);"
+  side: right
+  dropdown:
+  - title: "Our Campus"
+    url: "/college/campus"
+  - title: "About"
+    url: "/college/about"   
+      
+- title: Gallery
+  url: "/gallery/"
+  side: right
+- title: Contact
+  url: "/contact/"
+  side: right
