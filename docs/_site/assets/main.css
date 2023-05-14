@@ -1654,20 +1654,23 @@ button:hover {
     display: inline-block;
     width: calc(33% - 35px);
     vertical-align: text-top;
-    height: 320px;
+    height: 300px;
     overflow: hidden;
     position: relative;
     transform: translateY(0);
     transition: transform 100ms;
   }
-  .post-list > li :hover {
+  .post-list > li:hover {
     transform: translateY(-10px);
     transition: transform 100ms;
   }
 }
 .post-list > li p {
   margin: 0;
-  padding: 4px 8px;
+  padding: 4px 30px;
+}
+.post-list > li p:not(.grid-post-head) {
+  font-size: 14.4px;
 }
 .post-list > li a {
   color: #fdfdfd;

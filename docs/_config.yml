@@ -57,6 +57,9 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+collections:
+   gallery:
+    output: true
 defaults:
   - scope:
       path: "assets/gallery/uploads"

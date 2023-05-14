@@ -7,22 +7,16 @@ type: main
 image: /assets/gallery.jpg
 ---
 <ul class="post-list">
-    {% for post in site.posts %}
-    {% if post.type == "album" %}
+    {% for post in site.gallery %}
     {% if forloop.index <= 9 %}  <li>
         <a href="{{ post.url }}">
             {% if post.image %}
             <div style="background-image: url('{{ post.image }}');" class="grid-post-image"></div>
             {% endif %}
-
             <p class="grid-post-head">{{ post.title }}</p>
-            <p>{{ post.date }}</p>
-
-           
-
+            <p>{{ post.date | date: "%-d %B %Y" }}</p>
         </a>
         </li>
-        {% endif %}
         {% endif %}
         {% endfor %}
 </ul>
