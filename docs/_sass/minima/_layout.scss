@@ -92,17 +92,37 @@
           }
           @include media(desktop) {
             display: inline-block;
-
+            position: relative;
             height: $spacing-unit * 1.865;
             border: none;
+            > div{
+              height: 100%;
+              width: 100%;
+              box-sizing: border-box;
+              display: block;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              background-color: $background-color;
+              transform-origin: 50% 100%;
+              transform: scaleX(0) scaleY(0);
+              //transition: transform 30ms;
+            }
           }
-          &.active,
+          &.active{
+            > div{
+              transform: scaleY(0.1)  scaleX(0.8);
+            }
+          }
           &:hover {
             @include media(desktop) {
-              background-color: $background-color;
+             // background-color: $background-color;
               > label,
               > a {
                 color: $brand-color;
+              }
+              >div{
+                transform: scale(1);
               }
             }
           }
@@ -121,6 +141,11 @@
             font-size: $base-font-size;
             width: 100%;
             box-sizing: border-box;
+                  //background-color: $brand-color;
+
+            margin-left: 0;
+
+            display: none;
             @include media(desktop) {
               width: 220px;
               background-color: $background-color;
@@ -157,11 +182,7 @@
               height: 0.5px;
               background-color: #ffffff4f;
             }
-            //background-color: $brand-color;
-
-            margin-left: 0px;
-
-            display: none;
+      
             @include media(desktop) {
               position: absolute;
               list-style-position: inside;
