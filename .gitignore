@@ -7,7 +7,6 @@ docs/.bundle/
 docs/vendor/
 docs/_site/404.html
 docs/_site/404.html
-docs/_site/academics/index.html
-docs/_site/academics/programmes_offered.html
-docs/_site/academics/tuition_fees.html
-docs/_site/admission/index.html
+docs/_site/academics/
+docs/_site/admission/
+docs/_site/college/
