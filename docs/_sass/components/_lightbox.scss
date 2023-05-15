@@ -38,7 +38,13 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) scale(0);
-    transition: transform 100ms;
+    transition: transform 100ms, opacity 100ms;
+  }
+  .loader{
+   opacity: 0;
+    position: absolute;
+    left: calc(50% - 24px);
+    top: calc(50% - 24px);
   }
   #lightbox-thumbnails {border: 1px solid transparent;
 
@@ -142,3 +148,4 @@
     }
   }
 }
+

@@ -1,0 +1,10 @@
+---
+layout: album
+title: Test
+album_id: test
+background: album
+location: external
+permalink: /gallery/albums/test
+date: 2023-05-14 17:20:00 +0530
+categories: gallery album
+---

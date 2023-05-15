@@ -309,7 +309,13 @@ button:hover {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(0);
-  transition: transform 100ms;
+  transition: transform 100ms, opacity 100ms;
+}
+.lightbox-container .loader {
+  opacity: 0;
+  position: absolute;
+  left: calc(50% - 24px);
+  top: calc(50% - 24px);
 }
 .lightbox-container #lightbox-thumbnails {
   border: 1px solid transparent;
@@ -392,6 +398,23 @@ button:hover {
   transform: translate(-50%, -50%) scale(1);
 }
 
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #385396; /* Blue */
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /**
  * Site header
  */

@@ -18,22 +18,36 @@ layout: page
 {% endif %}
 
 <div class="album-grid">
-{% assign image_files = site.static_files | where: "album", true %}
-{% for image in image_files %}
-{% if image.path contains page.event_id %}
-{% if image.path contains "thumbs" %}
-  <div class="album-image-container">
-    <!--<picture>
+
+
+  {%- if page.location == "internal" -%}
+  {% assign image_files = site.static_files | where: "album", true %}
+  {% for image in image_files %}
+  {% if image.path contains page.album_id %}
+  {% if image.path contains "thumbs" %}
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.path}}" class="album-thumb" data-full-size="{{ domain }}{{ page.location }}{{ image.name }}">
-   </div>
-   {% endif %}
-{% endif %}
-{% endfor %}
+  <div class="album-image-container">
+    <img src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.path}}" class="album-thumb"
+      data-full-size="{{ domain }}/assets/gallery/uploads/{{ page.album_id }}/full-size/{{ image.name }}">
+
+  </div>
 
 
-
+  {% endif %}
+  {% endif %}
+  {% endfor %}
+  {% else %}
+  
+  {% assign album = site.data.album | where: "title", page.album_id | first %}
+ 
+  {% for image in album.images %}
+  <div class="album-image-container">
+    <img src="{{ image.thumb }}" alt="{{ image.path }}" class="album-thumb" data-full-size="{{ image.full }}">
+  </div>
+  {% endfor %}
+  {% endif %}
 </div>

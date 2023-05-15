@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
     thumbnailNext = $("thumb-next"),
     thumbnailPrev = $("thumb-prev"),
     thumbContainer = $("thumb-list"),
-    lightbox = $("lightbox");
+    lightbox = $("lightbox"),
+    imageSpinner = $("image-spinner");
   //Make the DIV element draggable:
   dragElement(lightboxImage);
 
@@ -34,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     imagesArray.push(element.getAttribute("data-full-size"));
     element.addEventListener("click", function (e) {
       thumbNailImgs[currentIndex].classList.remove("active");
-      lightboxImage.src = e.target.getAttribute("data-full-size");
+      loadAndSetImage(e.target.getAttribute("data-full-size"));
       currentIndex = id;
       setCurrentThumb(e.target)
       resetImageProperties();
@@ -49,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     thumbNailImgs[currentIndex].classList.remove("active");
     if (currentIndex < imagesArray.length - 1) {
       currentIndex++;
-      lightboxImage.src = imagesArray[currentIndex];
+      loadAndSetImage( imagesArray[currentIndex]);
       setCurrentThumb(thumbNailImgs[currentIndex])
     }
     resetImageProperties();
@@ -58,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
     thumbNailImgs[currentIndex].classList.remove("active");
     if (currentIndex > 0) {
       currentIndex--;
-      lightboxImage.src = imagesArray[currentIndex];
+      loadAndSetImage(imagesArray[currentIndex])
       setCurrentThumb(thumbNailImgs[currentIndex]);
     }
     resetImageProperties();
@@ -187,10 +188,10 @@ document.addEventListener("DOMContentLoaded", function () {
   function showLightBox(url) {
     lightbox.classList.add("visible")
     if (url) {
-      lightboxImage.src = url;
+      loadAndSetImage(url);
       currentIndex = imagesArray.indexOf(url);
     } else {
-      lightboxImage.src = imagesArray[currentIndex];
+      loadAndSetImage(imagesArray[currentIndex])
     }
     
     setCurrentThumb(thumbNailImgs[currentIndex])
@@ -217,5 +218,18 @@ document.addEventListener("DOMContentLoaded", function () {
     applyZoom();
     lightboxImage.style.top = "50%";
     lightboxImage.style.left = "50%";
+  }
+
+  function loadAndSetImage(url){
+    imageSpinner.style.opacity = 1;
+    lightboxImage.style.opacity = 0;
+  var downloadingImage = new Image();
+
+    downloadingImage.onload = function(){
+      imageSpinner.style.opacity = 0;
+        lightboxImage.src = this.src;
+        lightboxImage.style.opacity = 1;
+    };
+    downloadingImage.src = url;
   }
 });

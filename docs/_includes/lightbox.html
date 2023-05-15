@@ -1,5 +1,3 @@
-
-
 {%- if page.location contains 'http' -%}
 {%- assign domain = '' -%}
 {%- else -%}
@@ -7,6 +5,7 @@
 {% endif %}
 
 <div class="lightbox-container" id="lightbox">
+    <div class="loader" id="image-spinner"></div>
     <img id="lightbox-image">
     <div class="toolbar">
         <button id="lightbox-hide"><i class="material-icons-round">close</i></button>
@@ -18,25 +17,42 @@
     <button id="lightbox-next"><i class="material-icons-round">arrow_forward</i></button>
 
     <div id="lightbox-thumbnails">
-       
-        <div id="thumb-list">
-        {% assign image_files = site.static_files | where: "album", true%}
-        {% for image in image_files %}
-        {% if image.path contains page.event_id %}
-        {% if image.path contains "thumbs" %}
 
-        <!--<picture>
+        <div id="thumb-list">
+
+
+            {%- if page.location == "internal" -%}
+            {% assign image_files = site.static_files | where: "album", true %}
+            {% for image in image_files %}
+            {% if image.path contains page.album_id %}
+            {% if image.path contains "thumbs" %}
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.path}}" class="lb-thumb" data-full-size="{{ domain }}{{ page.location }}{{ image.name }}">
 
-        {% endif %}
-        {% endif %}
-        {% endfor %}
-    </div>
-    <button id="thumb-prev"><i class="material-icons-round">navigate_before</i></button>
-    <button id="thumb-next"><i class="material-icons-round">navigate_next</i></button>
+            <img src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.path}}" class="lb-thumb"
+                data-full-size="{{ domain }}/assets/gallery/uploads/{{ page.album_id }}/full-size/{{ image.name }}">
+
+
+
+
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+            {% else %}
+
+            {% assign album = site.data.album | where: "title", page.album_id | first %}
+
+            {% for image in album.images %}
+
+            <img src="{{ image.thumb }}" alt="{{ image.path }}" class="lb-thumb" data-full-size="{{ image.full }}">
+
+            {% endfor %}
+            {% endif %}
+        </div>
+        <button id="thumb-prev"><i class="material-icons-round">navigate_before</i></button>
+        <button id="thumb-next"><i class="material-icons-round">navigate_next</i></button>
     </div>
 </div>

@@ -8,7 +8,7 @@ layout: page
 
 <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 
-{% if page.type == "album" %}
+{% if page.layout == "album" %}
 
 
 {%- if page.location contains 'http' -%}
@@ -20,7 +20,7 @@ layout: page
 <div class="album-grid">
 {% assign image_files = site.static_files | where: "album", true %}
 {% for image in image_files %}
-{% if image.path contains page.event_id %}
+{% if image.path contains page.album_id %}
 {% if image.path contains "thumbs" %}
   <div class="album-image-container">
     <!--<picture>

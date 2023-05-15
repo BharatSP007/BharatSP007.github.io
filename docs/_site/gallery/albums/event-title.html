@@ -12,14 +12,12 @@
 <link rel="canonical" href="http://localhost:4000/gallery/albums/event-title" />
 <meta property="og:url" content="http://localhost:4000/gallery/albums/event-title" />
 <meta property="og:site_name" content="Sree Narayanaguru College of Advanced Studies" />
-<meta property="og:image" content="http://localhost:4000/assets/college.jpg" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-05-10T18:16:35+05:30" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/assets/college.jpg" />
+<meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Event Title" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-05-10T18:16:35+05:30","datePublished":"2023-05-10T18:16:35+05:30","description":"Sree Narayana Guru College of Advanced Studies, Mezhuveli, is a centre of excellence in higher learning affiliated to the Mahatma Gandhi University, Kottayam.","headline":"Event Title","image":"http://localhost:4000/assets/college.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/gallery/albums/event-title"},"url":"http://localhost:4000/gallery/albums/event-title"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-05-10T18:16:35+05:30","datePublished":"2023-05-10T18:16:35+05:30","description":"Sree Narayana Guru College of Advanced Studies, Mezhuveli, is a centre of excellence in higher learning affiliated to the Mahatma Gandhi University, Kottayam.","headline":"Event Title","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/gallery/albums/event-title"},"url":"http://localhost:4000/gallery/albums/event-title"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css">
  
@@ -81,6 +79,7 @@
         
 
 <div class="lightbox-container" id="lightbox">
+    <div class="loader" id="image-spinner"></div>
     <img id="lightbox-image">
     <div class="toolbar">
         <button id="lightbox-hide"><i class="material-icons-round">close</i></button>
@@ -92,778 +91,964 @@
     <button id="lightbox-next"><i class="material-icons-round">arrow_forward</i></button>
 
     <div id="lightbox-thumbnails">
-       
+
         <div id="thumb-list">
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-        <!--<picture>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112203.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112203.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112203.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112203.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112203.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112203.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112247.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112247.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112247.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112247.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112247.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112247.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112320.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112320.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112320.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112320.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112320.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112320.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112322.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112322.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112322.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112322.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112322.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112322.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112333.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112333.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112333.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112333.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112333.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112333.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112342.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112342.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112342.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112342.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112342.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112342.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112432.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112432.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112432.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112432.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112432.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112432.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112454.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112454.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112454.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112454.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112454.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112454.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112501.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112501.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112501.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112501.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112501.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112501.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112505.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112505.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112505.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112505.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112505.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112505.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112517.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112517.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112517.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112517.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112517.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112517.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112521.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112521.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112521.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112521.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112521.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112521.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112620.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112620.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112620.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112620.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112620.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112620.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112623.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112623.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112623.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112623.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112623.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112623.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112625.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112625.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112625.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112625.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112625.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112625.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112629.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112629.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112629.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112629.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112629.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112629.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112644.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112644.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112644.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112644.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112644.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112644.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112829.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112829.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112829.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112829.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112829.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112829.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112856.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112856.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112856.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112856.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112856.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112856.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112903.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112903.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112903.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112903.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112903.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112903.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112935.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112935.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112935.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112935.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112935.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112935.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112944.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112944.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112944.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112944.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112944.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112944.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113001.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113001.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113001.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113001.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113001.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113001.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113008.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113008.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113008.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113008.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113008.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113008.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113038.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113038.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113038.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113038.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113038.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113038.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113309.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113309.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113309.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113309.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113309.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113309.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113331.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113331.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113331.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113331.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113331.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113331.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113347.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113347.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113347.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113347.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113347.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113347.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113403.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113403.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113403.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113403.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113403.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113403.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113405.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113405.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113405.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113405.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113405.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113405.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113427.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113427.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113427.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113427.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113427.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113427.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113734.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113734.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113734.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113734.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113734.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113734.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113759.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113759.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113759.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113759.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113759.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113759.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114020.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114020.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114020.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114020.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114020.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114020.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114033.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114033.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114033.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114033.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114033.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114033.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114126.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114126.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114126.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114126.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114126.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114126.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114234.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114234.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114234.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114234.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114234.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114234.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114306.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114306.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114306.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114306.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114306.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114306.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114333.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114333.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114333.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114333.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114333.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114333.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114521.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114521.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114521.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114521.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114521.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114521.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_115214.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_115214.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_115214.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_115214.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_115214.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_115214.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_120128.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_120128.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_120128.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_120128.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_120128.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_120128.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_120258.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_120258.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_120258.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_120258.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_120258.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_120258.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/PANO_20230510_115038.webp" alt="/assets/gallery/uploads/event-title/thumbs/PANO_20230510_115038.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/PANO_20230510_115038.webp">
 
-        
-        
-        
-        
-        
+            <img src="/assets/gallery/uploads/event-title/thumbs/PANO_20230510_115038.webp" alt="/assets/gallery/uploads/event-title/thumbs/PANO_20230510_115038.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/PANO_20230510_115038.webp">
 
-        <!--<picture>
+
+
+
+            
+            
+            
+            
+            
+            <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-        <img src="/assets/gallery/uploads/event-title/thumbs/PANO_20230510_115129.webp" alt="/assets/gallery/uploads/event-title/thumbs/PANO_20230510_115129.webp" class="lb-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/PANO_20230510_115129.webp">
 
-        
-        
-        
-    </div>
-    <button id="thumb-prev"><i class="material-icons-round">navigate_before</i></button>
-    <button id="thumb-next"><i class="material-icons-round">navigate_next</i></button>
+            <img src="/assets/gallery/uploads/event-title/thumbs/PANO_20230510_115129.webp" alt="/assets/gallery/uploads/event-title/thumbs/PANO_20230510_115129.webp" class="lb-thumb"
+                data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/PANO_20230510_115129.webp">
+
+
+
+
+            
+            
+            
+            
+            
+            
+        </div>
+        <button id="thumb-prev"><i class="material-icons-round">navigate_before</i></button>
+        <button id="thumb-next"><i class="material-icons-round">navigate_next</i></button>
     </div>
 </div>
 
@@ -884,778 +1069,960 @@
 <a class="u-url" href="/gallery/albums/event-title" hidden></a>
 
 <div class="album-grid">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="album-image-container">
-    <!--<picture>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112203.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112203.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112203.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112203.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112203.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112203.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112247.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112247.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112247.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112247.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112247.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112247.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112320.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112320.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112320.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112320.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112320.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112320.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112322.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112322.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112322.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112322.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112322.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112322.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112333.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112333.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112333.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112333.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112333.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112333.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112342.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112342.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112342.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112342.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112342.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112342.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112432.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112432.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112432.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112432.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112432.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112432.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112454.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112454.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112454.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112454.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112454.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112454.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112501.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112501.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112501.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112501.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112501.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112501.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112505.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112505.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112505.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112505.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112505.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112505.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112517.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112517.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112517.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112517.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112517.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112517.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112521.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112521.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112521.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112521.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112521.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112521.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112620.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112620.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112620.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112620.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112620.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112620.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112623.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112623.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112623.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112623.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112623.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112623.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112625.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112625.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112625.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112625.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112625.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112625.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112629.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112629.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112629.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112629.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112629.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112629.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112644.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112644.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112644.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112644.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112644.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112644.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112829.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112829.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112829.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112829.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112829.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112829.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112856.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112856.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112856.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112856.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112856.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112856.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112903.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112903.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112903.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112903.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112903.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112903.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112935.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112935.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112935.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112935.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112935.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112935.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112944.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112944.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112944.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112944.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_112944.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_112944.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113001.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113001.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113001.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113001.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113001.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113001.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113008.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113008.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113008.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113008.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113008.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113008.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113038.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113038.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113038.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113038.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113038.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113038.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113309.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113309.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113309.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113309.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113309.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113309.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113331.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113331.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113331.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113331.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113331.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113331.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113347.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113347.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113347.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113347.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113347.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113347.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113403.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113403.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113403.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113403.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113403.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113403.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113405.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113405.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113405.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113405.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113405.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113405.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113427.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113427.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113427.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113427.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113427.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113427.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113734.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113734.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113734.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113734.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113734.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113734.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113759.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113759.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113759.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113759.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_113759.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_113759.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114020.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114020.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114020.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114020.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114020.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114020.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114033.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114033.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114033.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114033.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114033.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114033.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114126.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114126.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114126.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114126.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114126.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114126.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114234.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114234.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114234.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114234.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114234.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114234.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114306.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114306.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114306.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114306.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114306.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114306.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114333.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114333.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114333.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114333.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114333.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114333.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114521.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114521.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114521.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114521.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_114521.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_114521.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_115214.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_115214.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_115214.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_115214.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_115214.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_115214.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_120128.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_120128.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_120128.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_120128.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_120128.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_120128.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_120258.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_120258.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_120258.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_120258.webp" alt="/assets/gallery/uploads/event-title/thumbs/IMG_20230510_120258.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/IMG_20230510_120258.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/PANO_20230510_115038.webp" alt="/assets/gallery/uploads/event-title/thumbs/PANO_20230510_115038.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/PANO_20230510_115038.webp">
-   </div>
-   
-
-
-
-
   <div class="album-image-container">
-    <!--<picture>
+    <img src="/assets/gallery/uploads/event-title/thumbs/PANO_20230510_115038.webp" alt="/assets/gallery/uploads/event-title/thumbs/PANO_20230510_115038.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/PANO_20230510_115038.webp">
+
+  </div>
+
+
+  
+  
+  
+  
+  
+  <!--<picture>
       <source srcset=”images/frog.AVIF” type=”image/AVIF”>
       <source srcset="images/frog.webp" type="image/webp">
       <img src=" images/frog.jpg" alt="frog">
       </picture>-->
-      <img src="/assets/gallery/uploads/event-title/thumbs/PANO_20230510_115129.webp" alt="/assets/gallery/uploads/event-title/thumbs/PANO_20230510_115129.webp" class="album-thumb" data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/PANO_20230510_115129.webp">
-   </div>
-   
+  <div class="album-image-container">
+    <img src="/assets/gallery/uploads/event-title/thumbs/PANO_20230510_115129.webp" alt="/assets/gallery/uploads/event-title/thumbs/PANO_20230510_115129.webp" class="album-thumb"
+      data-full-size="http://localhost:4000/assets/gallery/uploads/event-title/full-size/PANO_20230510_115129.webp">
+
+  </div>
 
 
-
-
-
+  
+  
+  
+  
+  
+  
 </div>
-
   </div>
 
 </article>

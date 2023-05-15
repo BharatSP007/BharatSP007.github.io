@@ -1,12 +1,10 @@
 ---
 layout: album
-title:  "Event Title"
+title:  Event Title
+album_id: event-title
 background: album
-event_id: event-title
-location: "/assets/gallery/uploads/event-title/full-size/"
-permalink: "/gallery/albums/event-title"
-image: "/assets/college.jpg"
-type: album
-date:   2023-05-10 18:16:35 +0530
+location: internal
+permalink: /gallery/albums/event-title
+date: 2023-05-10 18:16:35 +0530
 categories: gallery album
 ---

@@ -10,9 +10,7 @@ image: /assets/gallery.jpg
     {% for post in site.gallery %}
     {% if forloop.index <= 9 %}  <li>
         <a href="{{ post.url }}">
-            {% if post.image %}
-            <div style="background-image: url('{{ post.image }}');" class="grid-post-image"></div>
-            {% endif %}
+            <div style="background-image: url('/assets/gallery/uploads/{{post.album_id}}/cover.jpg');" class="grid-post-image"></div>
             <p class="grid-post-head">{{ post.title }}</p>
             <p>{{ post.date | date: "%-d %B %Y" }}</p>
         </a>
