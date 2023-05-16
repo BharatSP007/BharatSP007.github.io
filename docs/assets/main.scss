@@ -442,15 +442,16 @@ img{
  column-gap: calc(#{$spacing-unit} / 2);
   row-gap: calc(#{$spacing-unit} / 2);
   grid-auto-columns: minmax(0, 1fr);
-  grid-template-columns: repeat(auto-fit, minmax(min(100%/3, max(64px, 100%/5)), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, max(64px, 100%/7)), 1fr));
   grid: auto-flow;
 .album-image-container{
+  background-color: $grey-color;
   overflow: hidden;
   vertical-align: middle;
-  @include media(desktop){
-  width: auto;
-  height: 200px;
-  background-size: cover;
+  &:hover{
+    img{
+      transform: scale(1.2);
+    }
   }
   img{
     cursor: pointer;
@@ -460,6 +461,7 @@ img{
     height: auto;
     object-fit: cover;
     object-position: center;
+    transition: transform 300ms;
   }
 }
 }
