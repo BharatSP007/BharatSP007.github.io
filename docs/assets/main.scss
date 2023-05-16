@@ -13,10 +13,12 @@
   text-align: center;
 }
 .head-carousel {
-  background-image: url("/assets/college-mob.jpg");
+  position: relative;
+  overflow: hidden;
+ // background-image: url("/assets/college-mob.jpg");
   background-position: top;
   @include media(desktop){
-  background-image: url("/assets/college.jpg");
+ // background-image: url("/assets/college.jpg");
   background-position: center;
   }
   
@@ -25,7 +27,7 @@
   height: 600px;
   @include media-max(mobile) {
     height: 400px;
-    background-image: url("/assets/college-mob.jpg");
+    //background-image: url("/assets/college-mob.jpg");
   }
   margin-left: calc(#{$spacing-unit} / -2);
   margin-right: calc(#{$spacing-unit} / -2);
@@ -33,6 +35,14 @@
     margin-left: -$spacing-unit;
     margin-right: -$spacing-unit;
   }
+img{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 50%;
+  transform: translateY(-48%)
+}
 }
 @keyframes marquee-anim {
   0% {
