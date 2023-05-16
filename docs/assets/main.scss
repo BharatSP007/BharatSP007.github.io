@@ -480,6 +480,7 @@ h2{
   background-color: $grey-color;
   overflow: hidden;
   vertical-align: middle;
+  aspect-ratio: 1;
   &:hover{
     img{
       transform: scale(1.2);
