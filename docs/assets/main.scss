@@ -43,6 +43,12 @@ img{
   top: 50%;
   transform: translateY(-48%)
 }
+h2{
+  display: block;
+  position: absolute;
+  bottom: $spacing-unit ;
+  left: $spacing-unit;
+}
 }
 @keyframes marquee-anim {
   0% {
@@ -134,18 +140,43 @@ img{
   }
 }
 .features-section {
+  position: relative;
   background-color: $brand-color;
   margin-left: calc(#{$spacing-unit} / -2);
   margin-right: calc(#{$spacing-unit} / -2);
-  @include media(desktop) {
-    margin-left: -$spacing-unit;
-    margin-right: -$spacing-unit;
-  }
+
   padding: $spacing-unit;
   color: $background-color;
   text-align: center;
+  overflow: hidden;
+  //background-image: url("/assets/sree-narayanaguru-college-of-advanced-studies-ground-floor-corridor.jpg");
+  //background-size: cover;
+ // background-position: center;
+ //background-blend-mode: multiply;
   @include media(desktop) {
+    margin-left: -$spacing-unit;
+    margin-right: -$spacing-unit;
+
     text-align: unset;
+  }
+
+  >img{
+    display: inline;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    opacity: 0.1;
+    max-width: unset;
+    height: 100%;
+    width: auto;
+    transform: translateX(-60%);
+    @include media(desktop){
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: auto;
+    transform: translateY(-50%);
+  }
   }
   h2 {
     text-transform: uppercase;
@@ -154,6 +185,7 @@ img{
   }
 
   .feature-grid {
+    position: relative;
     display: table;
     width: 100%;
     grid: auto-flow;
