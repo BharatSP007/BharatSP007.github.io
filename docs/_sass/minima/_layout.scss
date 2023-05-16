@@ -136,6 +136,7 @@
             padding-right: 2px;
           }
           .dropdown {
+           
             background-color: $brand-color;
 
             font-size: $base-font-size;
@@ -149,14 +150,29 @@
             @include media(desktop) {
               width: 220px;
               background-color: $background-color;
-              box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.11);
+              box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.11);
             }
 
             > li {
+              position: relative;
               padding-right: 8px;
               padding-left: 8px;
               @include media(desktop) {
                 width: 100%;
+
+                > div{
+                  height: 100%;
+                  width: 100%;
+                  box-sizing: border-box;
+                  display: block;
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  background-color: $brand-color;
+                  transform-origin: 0 50%;
+                  transform: scaleX(0) scaleY(0);
+                  //transition: transform 30ms;
+                }
               }
               box-sizing: border-box;
               a {
@@ -173,7 +189,9 @@
                 padding: calc(#{$spacing-unit} / 3);
               }
               &:hover {
-                background-color: #ffffff4f;
+                > div{
+                  transform: scaleX(0.03);
+                }
               }
             }
             .divider {

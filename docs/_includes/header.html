@@ -55,7 +55,7 @@
               {%- if forloop.index != 1 -%}
               <li class="divider"></li>
               {%- endif -%}
-              <li><a {%- if dropdown_link.class %} class="{{- dropdown_link.class -}}" {%- endif %}
+              <li><div class="selector"></div><a {%- if dropdown_link.class %} class="{{- dropdown_link.class -}}" {%- endif %}
                   href="{{- dropdown_link.url -}}" {%- if dropdown_link.url contains 'http' %}
                   target="_blank" {%- endif -%}>{{- dropdown_link.title | escape -}}</a></li>
               {%- endfor -%}

@@ -160,6 +160,13 @@
           font-size: $x-large-font-size;
           font-weight: 200;
         }
+        img{
+          display: block;
+          width: $x-large-font-size;
+          height: $x-large-font-size;
+          margin-left: auto;
+          margin-right: auto;
+        }
       }
     }
   }
