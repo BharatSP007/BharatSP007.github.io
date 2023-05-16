@@ -4,8 +4,8 @@
 - title: Tuition Fees
   url: "/academics/tuition_fees"
 
-#- title: Gallery
- # url: "/gallery/"
+- title: Gallery
+  url: "/gallery/"
 
 - title: About Us
   url: "/college/about"
