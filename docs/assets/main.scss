@@ -15,13 +15,13 @@
 .head-carousel {
   position: relative;
   overflow: hidden;
- // background-image: url("/assets/college-mob.jpg");
+  // background-image: url("/assets/college-mob.jpg");
   background-position: top;
-  @include media(desktop){
- // background-image: url("/assets/college.jpg");
-  background-position: center;
+  @include media(desktop) {
+    // background-image: url("/assets/college.jpg");
+    background-position: center;
   }
-  
+
   background-repeat: no-repeat;
   background-size: cover;
   height: 600px;
@@ -35,20 +35,20 @@
     margin-left: -$spacing-unit;
     margin-right: -$spacing-unit;
   }
-img{
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: auto;
-  top: 50%;
-  transform: translateY(-48%)
-}
-h2{
-  display: block;
-  position: absolute;
-  bottom: $spacing-unit ;
-  left: $spacing-unit;
-}
+  img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    transform: translateY(-48%);
+  }
+  h2 {
+    display: block;
+    position: absolute;
+    bottom: $spacing-unit;
+    left: $spacing-unit;
+  }
 }
 @keyframes marquee-anim {
   0% {
@@ -66,7 +66,7 @@ h2{
   &:hover {
     animation-play-state: paused;
   }
-  a{
+  a {
     color: $background-color;
   }
 }
@@ -151,8 +151,8 @@ h2{
   overflow: hidden;
   //background-image: url("/assets/sree-narayanaguru-college-of-advanced-studies-ground-floor-corridor.jpg");
   //background-size: cover;
- // background-position: center;
- //background-blend-mode: multiply;
+  // background-position: center;
+  //background-blend-mode: multiply;
   @include media(desktop) {
     margin-left: -$spacing-unit;
     margin-right: -$spacing-unit;
@@ -160,7 +160,7 @@ h2{
     text-align: unset;
   }
 
-  >img{
+  > img {
     display: inline;
     position: absolute;
     left: 50%;
@@ -170,13 +170,13 @@ h2{
     height: 100%;
     width: auto;
     transform: translateX(-60%);
-    @include media(desktop){
-    left: 0;
-    top: 50%;
-    width: 100%;
-    height: auto;
-    transform: translateY(-50%);
-  }
+    @include media(desktop) {
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: auto;
+      transform: translateY(-50%);
+    }
   }
   h2 {
     text-transform: uppercase;
@@ -202,7 +202,7 @@ h2{
           font-size: $x-large-font-size;
           font-weight: 200;
         }
-        img{
+        img {
           display: block;
           width: $x-large-font-size;
           height: $x-large-font-size;
@@ -342,7 +342,6 @@ h2{
   label {
     display: block;
   }
-  
 }
 
 .google-map {
@@ -386,35 +385,33 @@ h2{
 .about-container {
   margin-top: calc(#{$spacing-unit} * 2);
   margin-bottom: calc(#{$spacing-unit} * 2);
-  
+
   @include media(desktop) {
-  margin: calc(#{$spacing-unit} * 3);
-  
-} 
- ul {
+    margin: calc(#{$spacing-unit} * 3);
+  }
+  ul {
     list-style: unset;
   }
 }
 
-
-.form-alert{
-  &.inactive{
+.form-alert {
+  &.inactive {
     opacity: 0;
   }
-  &.processing{
+  &.processing {
     color: $text-color;
-  } 
-  &.success{
+  }
+  &.success {
     color: $ok-color;
   }
-  &.error{
+  &.error {
     color: $error-color;
   }
 }
 
 .grid-post-head {
   font-family: "Outfit", sans-serif;
-//  white-space: nowrap;
+  //  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   display: block;
@@ -427,196 +424,267 @@ h2{
   background-repeat: no-repeat;
   background-size: cover;
   height: 200px;
-  @include media(desktop){
+  @include media(desktop) {
     height: 200px;
   }
 }
 
 .post-list {
-
   > li {
-  margin-left: 0;
-  margin-right: 0;
-  background-color: $brand-color;
-  
-  @include media(desktop){
-    display: inline-block;
-    width: calc(33% - 35px);
-    vertical-align: text-top;
-    height: 300px;
-    overflow: hidden;
-    position: relative;
-    transform: translateY(0);
-    transition: transform 100ms;
-    &:hover{
-      transform: translateY(-10px);
+    margin-left: 0;
+    margin-right: 0;
+    background-color: $brand-color;
+
+    @include media(desktop) {
+      display: inline-block;
+      width: calc(33% - 35px);
+      vertical-align: text-top;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+      transform: translateY(0);
       transition: transform 100ms;
+      &:hover {
+        transform: translateY(-10px);
+        transition: transform 100ms;
+      }
+    }
+    p {
+      margin: 0;
+      padding: 4px $spacing-unit;
+      &:not(.grid-post-head) {
+        font-size: $base-font-size * 0.8;
+      }
+    }
+    a {
+      color: $background-color;
+      text-decoration: none;
     }
   }
-  p{
-    margin: 0;
-    padding: 4px $spacing-unit;
-    &:not(.grid-post-head)
-    {
-    font-size: $base-font-size * 0.8;
-    }
-  }
-  a{
-    color: $background-color;
-    text-decoration: none;
-  }
-}}
+}
 
-
-
-.album-grid{
+.album-grid {
   display: grid;
- column-gap: calc(#{$spacing-unit} / 2);
+  column-gap: calc(#{$spacing-unit} / 2);
   row-gap: calc(#{$spacing-unit} / 2);
   grid-auto-columns: minmax(0, 1fr);
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, max(64px, 100%/7)), 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, max(64px, 100%/7)), 1fr)
+  );
   grid: auto-flow;
-.album-image-container{
-  background-color: $grey-color;
-  overflow: hidden;
-  vertical-align: middle;
-  aspect-ratio: 1;
-  &:hover{
-    img{
-      transform: scale(1.2);
+  .album-image-container {
+    background-color: $grey-color;
+    overflow: hidden;
+    vertical-align: middle;
+    aspect-ratio: 1;
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
+    img {
+      cursor: pointer;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 300ms;
     }
   }
-  img{
-    cursor: pointer;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
-    transition: transform 300ms;
-  }
-}
 }
 
-.page-header-image{
-  &.contact{
+.page-header-image {
+  &.contact {
     background-image: url("/assets/contact-mob.jpg");
-    @include media(tablet){
+    @include media(tablet) {
       background-image: url("/assets/contact-tab.jpg");
-      }
-    @include media(desktop){
-    background-image: url("/assets/contact.jpg");
+    }
+    @include media(desktop) {
+      background-image: url("/assets/contact.jpg");
     }
   }
-  &.gallery{
+  &.gallery {
     background-image: url("/assets/gallery-mob.jpg");
-    @include media(tablet){
+    @include media(tablet) {
       background-image: url("/assets/gallery-tab.jpg");
-      }
-    @include media(desktop){
-    background-image: url("/assets/gallery.jpg");
+    }
+    @include media(desktop) {
+      background-image: url("/assets/gallery.jpg");
     }
   }
-  &.programmes{
+  &.programmes {
     background-image: url("/assets/programmes-mob.jpg");
-    @include media(tablet){
+    @include media(tablet) {
       background-image: url("/assets/programmes-tab.jpg");
-      }
-    @include media(desktop){
-    background-image: url("/assets/programmes.jpg");
+    }
+    @include media(desktop) {
+      background-image: url("/assets/programmes.jpg");
     }
   }
-  &.about{
+  &.about {
     background-image: url("/assets/about-mob.jpg");
-    @include media(tablet){
+    @include media(tablet) {
       background-image: url("/assets/about-tab.jpg");
-      }
-    @include media(desktop){
-    background-image: url("/assets/about.jpg");
+    }
+    @include media(desktop) {
+      background-image: url("/assets/about.jpg");
     }
   }
-  &.fees{
+  &.fees {
     background-image: url("/assets/fees-mob.jpg");
-    @include media(tablet){
+    @include media(tablet) {
       background-image: url("/assets/fees-tab.jpg");
-      }
-    @include media(desktop){
-    background-image: url("/assets/fees.jpg");
+    }
+    @include media(desktop) {
+      background-image: url("/assets/fees.jpg");
     }
   }
-  &.error404{
+  &.error404 {
     background-image: url("/assets/error404-mob.jpg");
-    @include media(tablet){
+    @include media(tablet) {
       background-image: url("/assets/error404-tab.jpg");
-      }
-    @include media(desktop){
-    background-image: url("/assets/error404.jpg");
+    }
+    @include media(desktop) {
+      background-image: url("/assets/error404.jpg");
     }
   }
-  &.album{
+  &.album {
     background-image: url("/assets/album-mob.jpg");
-    @include media(tablet){
+    @include media(tablet) {
       background-image: url("/assets/album-tab.jpg");
-      }
-    @include media(desktop){
-    background-image: url("/assets/album.jpg");
+    }
+    @include media(desktop) {
+      background-image: url("/assets/album.jpg");
     }
   }
-  &.facilities{
+  &.facilities {
     background-image: url("/assets/facilities-mob.jpg");
-    @include media(tablet){
+    @include media(tablet) {
       background-image: url("/assets/facilities-tab.jpg");
-      }
-    @include media(desktop){
-    background-image: url("/assets/facilities.jpg");
+    }
+    @include media(desktop) {
+      background-image: url("/assets/facilities.jpg");
     }
   }
 }
 
-.pic-text-block{
-  @include media(desktop){
-  position: static;
-  div{
-    position: relative;
-    display: block;
-    height: 300px;
-    div{
+.pic-text-block {
+  @include media(desktop) {
+    position: static;
+    div {
+      position: relative;
       display: block;
-      position: absolute;
-      width: 60%;
+      height: 300px;
+      div {
+        display: block;
+        position: absolute;
+        width: 60%;
+      }
     }
-  }
- 
-  >:nth-child(odd){
-    
-    img{
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: auto;
+
+    > :nth-child(odd) {
+      img {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: auto;
+      }
+      div {
+        right: 0;
+        top: 0;
+      }
     }
-    div{
-      right: 0;
-      top: 0;
-    }
-    }
-  
-  >:nth-child(even){
-    img{
-      display: block;
-      position: absolute;
-      right: 0;
-      top:0;
-      height: 100%;
-      width: auto;
-    }
-    div{
-      left: 0;
-      top: 0;
+
+    > :nth-child(even) {
+      img {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: auto;
+      }
+      div {
+        left: 0;
+        top: 0;
+      }
     }
   }
 }
+
+.mission-and-vision {
+  display: table;
+  background-color: $brand-color;
+  color: $background-color;
+  margin-left: calc(#{$spacing-unit} / -2);
+  margin-right: calc(#{$spacing-unit} / -2);
+
+  padding: calc(#{$spacing-unit} / 2);
+  @include media(desktop) {
+  margin-left: -$spacing-unit * 4;
+  margin-right: -$spacing-unit * 4;
+  }
+  > div {
+    display: table-row;
+   
+    > div {
+      
+      display: block;
+     // text-align: center;
+      @include media-max(mobile){
+      ul{
+       // list-style: none;
+       // list-style-position: inside;
+        padding: 0;
+      //  margin: 0;
+        li{
+        //  padding: $spacing-unit 0 $spacing-unit 0;
+        }
+      }
+      }
+      @include media(desktop) {
+      display: table-cell;
+       padding:$spacing-unit;
+       text-align: left;
+      }
+      img{
+        display: block;
+        width: $x-large-font-size;
+        height: $x-large-font-size;
+      //  margin-left: auto;
+      //  margin-right: auto;
+      margin-top: $spacing-unit;
+        @include media(desktop) {
+          margin: 0;
+        }
+      }
+    }
+    .vision {
+      @include media(desktop) {
+        width: 40%;
+        padding-left: $spacing-unit * 4;
+      }
+    }
+
+    .mission {
+      @include media(desktop) {
+       
+        padding-right: $spacing-unit * 4;
+      }
+    }
+    .divider{
+      height: 2px;
+      padding: 0;
+      background-color: $background-color;
+      @include media(desktop){
+        height: auto;
+        width: 2px;
+      }
+    }
+  }
 }
