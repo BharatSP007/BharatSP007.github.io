@@ -99,7 +99,6 @@ document.addEventListener("DOMContentLoaded", function () {
       t2pos3 = 0,
       t2pos4 = 0;
 
-    let width = window.innerWidth;
     let initialDist = 0;
     let dist = 0;
     // otherwise, move the DIV from anywhere inside the DIV:
@@ -122,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
       pos4 = clientY;
       console.log(e.touches);
       if (e.touches && e.touches.length == 2) {
-        console.log("multitouch");
+        //this is a multitouch event
         t2pos3 = e.touches[1].clientX;
         t2pos4 = e.touches[1].clientY;
         let difX = pos3 - t2pos3,
