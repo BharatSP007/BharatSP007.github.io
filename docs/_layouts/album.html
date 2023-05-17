@@ -42,12 +42,11 @@ layout: page
   {% endfor %}
   {% else %}
   
-  {% assign album = site.data.album | where: "title", page.album_id | first %}
- 
-  {% for image in album.images %}
+  {%- assign album = site.data.albums[page.album_id] | first -%}
+  {%- for image in album.images -%}
   <div class="album-image-container">
-    <img src="{{ image.thumb }}" alt="{{ image.path }}" class="album-thumb" data-full-size="{{ image.full }}">
+    <img src="{{ image.thumb }}" alt="{{ image.alt }}" class="album-thumb" data-full-size="{{ image.full }}">
   </div>
-  {% endfor %}
-  {% endif %}
+  {%- endfor -%}
+  {%- endif -%}
 </div>

@@ -43,7 +43,7 @@
             {% endfor %}
             {% else %}
 
-            {% assign album = site.data.album | where: "title", page.album_id | first %}
+            {%- assign album = site.data.albums[page.album_id] | first -%}
 
             {% for image in album.images %}
 
