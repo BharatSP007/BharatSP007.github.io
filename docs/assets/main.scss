@@ -321,7 +321,7 @@
     text-align: center;
     height: 300px;
     border: 1px solid black;
-    padding: calc(#{$spacing-unit} / 2);
+    padding: calc(#{$spacing-unit} / 2) 0 calc(#{$spacing-unit} / 2) 0;
     a,
     i {
       display: block;
