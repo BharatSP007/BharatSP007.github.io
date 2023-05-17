@@ -242,7 +242,10 @@ table {
     }
   }
   th, td {
-    padding: calc(#{$spacing-unit} / 3) calc(#{$spacing-unit} / 2);
+    padding: calc(#{$spacing-unit} / 4) calc(#{$spacing-unit} / 4);
+    @include media (desktop){
+      padding: calc(#{$spacing-unit} / 2) calc(#{$spacing-unit} / 2);
+    } 
   }
   th {
     background-color: lighten($grey-color-light, 3%);
