@@ -28,11 +28,18 @@ document.addEventListener("DOMContentLoaded", function () {
     if (sideNav.className == "right sn-expand") {
       sideNav.className = "right sn-collapse";
       menuIcon.style.display = "block"
-      menuCloseIcon.style.display = "none"
+      menuCloseIcon.style.display = "none" 
+      
     } else {
       sideNav.className = "right sn-expand";
       menuIcon.style.display = "none"
       menuCloseIcon.style.display = "block"
+
+      //revert open submenus to initial state
+      let checks = sideNav.getElementsByTagName("input");
+      for(i=0;i<checks.length; i++){
+        checks[i].checked = false;
+      }
     }
   });
 
