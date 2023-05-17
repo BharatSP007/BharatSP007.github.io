@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="48"
+   viewBox="0 96 960 960"
+   width="48"
+   version="1.1"
+   id="svg743"
+   sodipodi:docname="mission.svg"
+   inkscape:version="1.2.2 (1:1.2.2+202212051550+b0a8486541)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs747" />
+  <sodipodi:namedview
+     id="namedview745"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="12.291667"
+     inkscape:cx="17.328814"
+     inkscape:cy="24"
+     inkscape:window-width="1358"
+     inkscape:window-height="702"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg743" />
+  <path
+     d="M480 616q-17 0-28.5-11.5T440 576q0-17 11.5-28.5T480 536q17 0 28.5 11.5T520 576q0 17-11.5 28.5T480 616Zm.134 320q-74.442 0-139.794-28.339-65.353-28.34-114.481-77.422-49.127-49.082-77.493-114.373Q120 650.575 120 576.134q0-74.673 28.339-140.41 28.34-65.737 77.422-114.365 49.082-48.627 114.373-76.993Q405.425 216 479.866 216q74.673 0 140.41 28.339 65.737 28.34 114.365 76.922 48.627 48.582 76.993 114.257Q840 501.194 840 575.866q0 74.442-28.339 139.794-28.34 65.353-76.922 114.481-48.582 49.127-114.257 77.493Q554.806 936 480.134 936ZM480 905.231q137.385 0 233.308-96.039Q809.231 713.154 809.231 576q0-137.385-95.923-233.308T480 246.769q-137.154 0-233.192 95.923Q150.769 438.615 150.769 576q0 137.154 96.039 233.192Q342.846 905.231 480 905.231ZM480 576ZM333.769 743l194.846-107.231q3.462-1.23 6.193-3.961 2.731-2.731 4.731-6.962L646.769 430q5.77-10-2.576-17.885-8.347-7.884-18.193-2.884l-194.846 107.23q-4.231 2-6.962 4.731t-3.961 6.193L313 722.231q-5.769 10.769 2.115 18.654Q323 748.769 333.769 743Z"
+     id="path741"
+     style="fill:#ffffff;fill-opacity:1" />
+</svg>
