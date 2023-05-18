@@ -22,11 +22,16 @@
     position: absolute;
     top: 50%;
     left: 0;
+  
   }
   .toolbar {
     position: absolute;
     top: 0;
     left: 0;
+    background-color: $brand-color;
+    @include media-max(mobile){
+      width: 100%;
+    }
   }
   > img {
     touch-action: none;
@@ -55,12 +60,20 @@
     left: calc(20% - 50px);
     padding: 0 50px 0 50px;
    
-   
+    @include media-max(mobile){
+      bottom: 50px;
+      width: 100%;
+      left: 0;
+      padding: 0;
+    }
 
     transform: scale(0.2);
     transition: transform 300ms ease-in-out 500ms;
     button {
         display: block;
+        @include media-max(mobile){
+          display: none;
+        }
         position: absolute;
         top: 0;
         height: 100%;
@@ -147,5 +160,6 @@
       transform: translate(-50%, -50%) scale(1);
     }
   }
+
 }
 
