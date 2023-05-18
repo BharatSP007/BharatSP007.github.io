@@ -780,8 +780,8 @@
       }
     }
     img {
-      @include media(mobile) {
-          margin-left: auto;
+      @include media-max(mobile) {
+        margin-left: auto;
          margin-right: auto;
       }
       display: block;
