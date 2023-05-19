@@ -789,3 +789,15 @@
     }
   }
 }
+
+.campus-content {
+  margin-top: calc(#{$spacing-unit} * 2);
+  margin-bottom: calc(#{$spacing-unit} * 2);
+
+  @include media(desktop) {
+    margin: calc(#{$spacing-unit} * 3);
+  }
+  ul {
+    list-style: unset;
+  }
+}
