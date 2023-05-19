@@ -61,13 +61,13 @@ image: /assets/contact-us.jpg
     <p>Have a simple query? Leave us a message and we will get back to you as soon as we can.</p>
     <form class="contact-form" id="contact-form">
         <label>Your Name</label>
-        <input type="text" required id="sender-name">
+        <input type="text" id="sender-name" name="from_name" required>
         <label>Your E-mail id</label>
-        <input type="email" required id="sender-email">
+        <input type="email" id="sender-email" name="reply_to" required>
         <label>Your Phone</label>
-        <div class="prefixed-input" ><span>+91</span><input type="tel" required id="sender-phone" pattern="[0-9]{10}"></div>
+        <div class="prefixed-input" ><span>+91</span><input type="tel" id="sender-phone" name="phone" pattern="[0-9]{10}" required></div>
         <label>Your Message</label>
-        <textarea id="query-message" name="query-message" rows="10" cols="50" required></textarea>
+        <textarea id="query-message" name="message" rows="10" cols="50" required></textarea>
         <button type="submit"><i class="material-icons-round">send</i>Send Message</button>
         <div class="form-alert inactive">...</div>
     </form>

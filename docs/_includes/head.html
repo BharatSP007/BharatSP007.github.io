@@ -3,6 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="robots" content="noindex, nofollow" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   {%- seo -%}
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
  
@@ -21,7 +22,9 @@
   <script type="text/javascript" src="{{ "/assets/js/lightbox.js" | relative_url }}"></script>
   {% endif %}
   {% if page.url contains '/contact' %}
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
+ <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
   {% endif %}
   <style>
     .material-symbols-rounded {
