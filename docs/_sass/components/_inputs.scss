@@ -11,34 +11,59 @@ textarea {
   box-sizing: border-box;
   resize: vertical;
   font-size: $base-font-size;
- 
 }
-button{
-    padding: 8px calc(#{$spacing-unit} /2 ) 8px calc(#{$spacing-unit} /2 );
-    background-color: $brand-color;
+.button-link {
+  &:visited {
     color: $background-color;
-    outline: none;
-    border: 1px solid $brand-color;
-    cursor: pointer;
-    &[type="submit"] {
-        line-height:$base-line-height;
-        vertical-align:middle;
-        width: fit-content;
-        font-size: $base-font-size;
-        i{
-            
-            display: inline;
-            margin-right: calc(#{$spacing-unit} /2 );
-            vertical-align:middle;
-        }
-        font-family: $base-font-family;
-      }
-
-      &:hover{
-        background-color: $background-color;
-        color: $brand-color;
-      }
+    text-decoration: none;
+  }
+  &:active{
+    color: $background-color;
+    text-decoration: none;
+  }
+  &:hover{
+    color: $background-color;
+    text-decoration: none;
+  }
+  
 }
+button,
+.button-link {
+  text-decoration: none;
+  padding: 8px calc(#{$spacing-unit} / 2) 8px calc(#{$spacing-unit} / 2);
+  background-color: $brand-color;
+  color: $background-color;
+  outline: none;
+  border: 1px solid $brand-color;
+  cursor: pointer;
+  &[type="submit"] {
+    line-height: $base-line-height;
+    vertical-align: middle;
+    width: fit-content;
+    font-size: $base-font-size;
+    i {
+      display: inline;
+      margin-right: calc(#{$spacing-unit} / 2);
+      vertical-align: middle;
+    }
+    font-family: $base-font-family;
+  }
+
+  &:hover {
+    background-color: $background-color;
+    color: $brand-color;
+  }
+  &.inverted{
+    border: 1px solid $background-color;
+    background-color: $background-color;
+    color: $brand-color;
+    &:hover {
+      background-color: $brand-color;
+      color: $background-color;
+    }
+  }
+}
+
 .prefixed-input {
   display: block;
   position: relative;
@@ -52,5 +77,5 @@ button{
     left: 0;
     position: absolute;
     color: $grey-color;
-  } 
+  }
 }

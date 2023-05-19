@@ -1,0 +1,10 @@
+---
+layout: album
+title: Farewell 2023
+album_id: farewell-2023
+background: album
+location: internal
+permalink: /gallery/albums/farewell-2023
+date: 2023-03-23 10:00:00 +0530
+categories: gallery album
+---
