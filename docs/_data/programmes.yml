@@ -1,5 +1,5 @@
 - title: B.Com Computer Applications
-  url: /academics/b-com-computer/
+  url: /academics/b-com-computer
   description: Enables understanding of commerce, especially the discipline that involves the use of software technology application.
   fees-per-semester: "11,250"
   seats: 60
@@ -13,7 +13,7 @@
   image: /assets/co-op.jpg
 
 - title: B.A. Sociology
-  url: /academics/ba-sociology/
+  url: /academics/ba-sociology
   description: Deals with the study of society with key focus on analyzing how societies evolve, persist, and ultimately undergo transformations.
   fees-per-semester: "9,000"
   seats: 60

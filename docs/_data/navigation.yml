@@ -22,8 +22,8 @@
     url: "/college/about"   
       
 - title: Gallery
-  url: "/gallery/"
+  url: "/gallery"
   side: right
 - title: Contact
-  url: "/contact/"
+  url: "/contact"
   side: right
