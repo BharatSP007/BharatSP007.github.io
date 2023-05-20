@@ -889,15 +889,17 @@
 }
 
 .visit-directions {
+  @include media(desktop){
   display: flex;
+  }
   div {
+    @include media(desktop){
     margin: 1%;
     display: inline-block;
     width: 46%;
     height: 100%;
-    @include media-max(mobile) {
-      width: 100%;
     }
+    
     iframe {
       width: 100%;
     }
@@ -905,7 +907,9 @@
 }
 
 .quick-query {
+  @include media(desktop){
   text-align: center;
+  }
   padding: $spacing-unit 0 $spacing-unit 0;
   form {
     margin-left: auto;
