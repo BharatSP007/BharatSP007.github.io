@@ -8,39 +8,44 @@ parent: Academics
 image: /assets/prg-ofrd.jpg
 ---
 <div class="programmes-container">
-<div class="programmes-grid">
-{% for programme in site.data.programmes %}
-<div class="programmes-item">
-    <div class="programme-image" style="background-image: url('{{ programme.image }}');"></div>
-    <div class="programme-dets">
-        <h3 class="programme-title">{{ programme.title }}</h3>
-        <div class="programme-description">{{ programme.description }}</div>
-        <div class="programme-seats">Seats: {{ programme.seats }}</div>
-        <div class="programme-fees">Fees: ₹{{ programme.fees-per-semester }} per Semester</div>
-        <!--<a href="{{ programme.url }}">Learn More</a>-->
-    </div>
-</div>
-{% endfor %}
+    <div class="programmes-grid">
+        {% for programme in site.data.programmes %}
+        <div class="programmes-item">
+            <div class="programme-image" style="background-image: url('{{ programme.image }}');"></div>
+            <div class="programme-dets">
+                <h4 class="programme-title">{{ programme.title }}</h4>
+                <div class="programme-description">{{ programme.description }}</div>
+              
+                <!--<a href="{{ programme.url }}">Learn More</a>-->
+            </div>
+            <div class="programme-data">
+                <div class="programme-seats">Seats: {{ programme.seats }}</div>
+                <div class="programme-fees">Fees: ₹{{ programme.fees-per-semester }} / Sem</div>
+            </div>
+        </div>
+        {% endfor %}
 
-</div>
-<div class="admission">
-    <h2>How to apply?</h2>
-    <p>Admissions are as per the rules and regulations of the Mahatma Gandhi Univeristy, Kottayam. 50% of the seats are filled by the University through the Centralized Admission Process, and the half is filled by the management. </p>
-    <div>
-    <div class="card">
-        <h3>Merit Quota</h3>
-        <p>
-            Students should apply via the UG CAP of the MG University to acquire a seat in the merit quota. 
-        </p>
-        <a class="button-link" href="https://cap.mgu.ac.in/ugcap2023/" target="_blank">Apply Now</a>
     </div>
-    <div class="card">
-    <h3>Managent Quota</h3>
-    <p>
-        To apply to the management quota, please contact us through any of the available channels.
-    </p>
-    <a class="button-link" href="/contact">Contact Us</a>
+    <div class="admission">
+        <h2>How to apply?</h2>
+        <p>Admissions are as per the rules and regulations of the Mahatma Gandhi Univeristy, Kottayam. 50% of the seats
+            are filled by the University through the Centralized Admission Process, and the half is filled by the
+            management. </p>
+        <div>
+            <div class="card">
+                <h3>Merit Quota</h3>
+                <p>
+                    Students should apply via the UG CAP of the MG University to acquire a seat in the merit quota.
+                </p>
+                <a class="button-link" href="https://cap.mgu.ac.in/ugcap2023/" target="_blank">Apply Now</a>
+            </div>
+            <div class="card">
+                <h3>Managent Quota</h3>
+                <p>
+                    To apply to the management quota, please contact us through any of the available channels.
+                </p>
+                <a class="button-link" href="/contact">Contact Us</a>
+            </div>
+        </div>
     </div>
-</div>
-</div>
 </div>
