@@ -438,8 +438,18 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 200px;
+  overflow: hidden;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 100ms;
+  }
   @include media(desktop) {
     height: 200px;
+
+   
   }
 }
 .gallery-container{
@@ -458,6 +468,9 @@
   );
   grid: auto-flow;
   > li {
+    a {
+      overflow: hidden;
+    }
     margin-left: 0;
     margin-right: 0;
     background-color: $brand-color;
@@ -471,8 +484,11 @@
       transform: translateY(0);
       transition: transform 100ms;
       &:hover {
-        transform: translateY(-10px);
-        transition: transform 100ms;
+        .grid-post-image{
+          img{
+          transform: scale(1.1);
+          transition: transform 100ms;
+        }}
       }
     }
     p {
