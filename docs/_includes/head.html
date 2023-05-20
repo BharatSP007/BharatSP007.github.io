@@ -1,17 +1,20 @@
 <head>
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' cdn.jsdelivr.net; img-src https://* 'self'; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.googleapis.com fonts.gstatic.com; child-src 'none'; frame-src 'self' www.google.com;"/>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="robots" content="noindex, nofollow" /> 
+  <meta name="robots" content="noindex, nofollow" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   {%- seo -%}
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
- 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"rel="stylesheet">
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.html -%}
+  {%- include google-analytics.html -%}
   {%- endif -%}
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -22,17 +25,16 @@
   <script type="text/javascript" src="{{ "/assets/js/lightbox.js" | relative_url }}"></script>
   {% endif %}
   {% if page.url contains '/contact' %}
- <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
   {% endif %}
   <style>
     .material-symbols-rounded {
       font-variation-settings:
-      'FILL' 0,
-      'wght' 200,
-      'GRAD' 0,
-      'opsz' 48
+        'FILL' 0,
+        'wght' 200,
+        'GRAD' 0,
+        'opsz' 48
     }
-    </style>
+  </style>
 </head>
