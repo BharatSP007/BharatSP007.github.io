@@ -8,8 +8,11 @@ image: /assets/gallery.jpg
 ---
 <div class="gallery-container">
 <ul class="post-list">
-    {% for post in site.gallery %}
-    {% if forloop.index <= 9 %}  <li class="card">
+    {% assign albums = site.gallery | sort: 'date' | reverse %}
+    {% for post in albums %}
+  {% if forloop.index <= 9 %}{% endif %}  
+    
+    <li class="card">
         <a href="{{ post.url }}">
             <div class="grid-post-image"><img  src="/assets/gallery/uploads/{{post.album_id}}/cover.jpg"></div>
             <p class="grid-post-head">{{ post.title }}</p>
@@ -17,13 +20,14 @@ image: /assets/gallery.jpg
             <p>View Photos <span></span> </p>
         </a>
         </li>
-        {% endif %}
+        <!--{% comment %}{% endif %} {% endcomment %}-->
         {% endfor %}
 </ul>
-{%- if site.posts.size > 11 -%}
-<div style="text-align: center;">
+
+{%- if albums.size > 9 -%}
+<!--<div style="text-align: center;">
     <a class="button-link" href="/page/2">View More</a>
 </div>
-</div>
+</div>-->
 {%- endif -%}
 
