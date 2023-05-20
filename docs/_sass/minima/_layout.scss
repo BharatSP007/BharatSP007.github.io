@@ -605,9 +605,9 @@
 }
 .post-title {
   position: absolute;
-  bottom: $spacing-unit;
-  left: $spacing-unit;
-  margin-left: $spacing-unit;
+  bottom: calc(#{$spacing-unit} / 2);
+  left: calc(#{$spacing-unit} / 2);
+ 
   font-weight: 700;
   color: $background-color;
   text-shadow: 0 0 10px #00000083;
@@ -617,6 +617,8 @@
 
   @include media(desktop) {
     @include relative-font-size(2.75);
+    bottom: $spacing-unit;
+    left: $spacing-unit * 2;
   }
 }
 
