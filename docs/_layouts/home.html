@@ -101,8 +101,29 @@ title: Home
     <div>
 
     </div>
+
+
+    <div class="container">
+      <h2>Latest Photos</h2>
+      <ul class="post-list">
+        {% assign albums = site.gallery | sort: 'date' | reverse %}
+        {% for post in albums %}
+        {% if forloop.index <= 3 %}  <li class="card">
+            <a href="{{ post.url }}">
+                <div class="grid-post-image"><img  src="/assets/gallery/uploads/{{post.album_id}}/cover.jpg"></div>
+                <p class="grid-post-head">{{ post.title }}</p>
+                <p class="sub-text">{{ post.date | date: "%-d %B %Y" }}</p>
+                <p>View Photos <span></span> </p>
+            </a>
+            </li>
+            {% endif %}
+            {% endfor %}
+    </ul>
+    <a class="button-link" href="/gallery">Browse All Photos</a>
+    </div>
+    
   </div>
-  {{ content }}
+  
   <!--
   {%- if site.posts.size > 0 -%}
   <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
