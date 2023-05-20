@@ -25,7 +25,7 @@ phone-secondary: +91 8848439201
 address1: Sree Narayana Guru College of Advanced Studies
 locality: Mezhuveli, Pathanamthitta
 state: Kerala
-pin: 689645
+pin: 689507
 description: >- # this means to ignore newlines until "baseurl:"
   Sree Narayana Guru College of Advanced Studies, Mezhuveli, is a centre of excellence in higher learning affiliated to the Mahatma Gandhi University, Kottayam.
 baseurl: "" # the subpath of your site, e.g. /blog
