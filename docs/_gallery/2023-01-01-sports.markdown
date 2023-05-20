@@ -1,0 +1,10 @@
+---
+layout: album
+title: Sports
+album_id: sports
+background: album
+location: internal
+permalink: /gallery/albums/sports
+date: 2023-01-01 10:00:00 +0530
+categories: gallery album
+---

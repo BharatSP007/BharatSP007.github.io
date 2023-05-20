@@ -1,6 +1,6 @@
 ---
 layout: album
-title:  Event Title
+title:  Anti-Drug Seminar
 album_id: anti-drug-seminar
 background: album
 location: internal
