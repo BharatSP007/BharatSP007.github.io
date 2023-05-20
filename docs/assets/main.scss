@@ -63,6 +63,7 @@
   animation-duration: 20s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  width: fit-content;
   &:hover {
     animation-play-state: paused;
   }
@@ -347,8 +348,19 @@
     display: block;
   }
 }
+.programmes-container{
+  margin-top: calc(#{$spacing-unit} * 2);
+  margin-bottom: calc(#{$spacing-unit} * 2);
 
-.programmes-container {
+  @include media(desktop) {
+    margin: 0 calc(#{$spacing-unit} * 3);
+  }
+  ul {
+    list-style: unset;
+  }
+}
+
+.programmes-grid {
   display: grid;
   column-gap: 8px;
   row-gap: 8px;
@@ -389,7 +401,7 @@
   margin-bottom: calc(#{$spacing-unit} * 2);
 
   @include media(desktop) {
-    margin: calc(#{$spacing-unit} * 3);
+    margin: 0 calc(#{$spacing-unit} * 3);
   }
   ul {
     list-style: unset;
@@ -430,16 +442,28 @@
     height: 200px;
   }
 }
-
+.gallery-container{
+ @include media(desktop){
+  margin: 0 calc(#{$spacing-unit} * 3)
+ }
+}
 .post-list {
+  display: grid;
+  column-gap: calc(#{$spacing-unit} / 2);
+  row-gap: calc(#{$spacing-unit} / 2);
+  grid-auto-columns: minmax(0, 1fr);
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(100%, max(300px, 100%/4)), 1fr)
+  );
+  grid: auto-flow;
   > li {
     margin-left: 0;
     margin-right: 0;
     background-color: $brand-color;
 
     @include media(desktop) {
-      display: inline-block;
-      width: calc(33% - 35px);
+     
       vertical-align: text-top;
       height: 300px;
       overflow: hidden;
@@ -795,7 +819,7 @@
   margin-bottom: calc(#{$spacing-unit} * 2);
 
   @include media(desktop) {
-    margin: calc(#{$spacing-unit} * 3);
+    margin: 0 calc(#{$spacing-unit} * 3);
   }
   ul {
     list-style: unset;
@@ -805,10 +829,14 @@
 .visit-directions {
   display: flex;
   div {
+    margin: 1%;
     display: inline-block;
-    width: 48%;
+    width: 46%;
     height: 100%;
     @include media-max(mobile) {
+      width: 100%;
+    }
+    iframe{
       width: 100%;
     }
   }
@@ -848,26 +876,55 @@
       }
     }
   
-  > div {
-    @include media(desktop) {
-      width: 100%;
-      margin: calc(#{$spacing-unit} / 4);
+ 
+}
 
-      box-sizing: border-box;
-    }
-    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.164);
+.external-link{
+  content: "\e89e"; 
+  font-family: "Material Icons Round", sans-serif;
+  color: $background-color;
+  font-weight: 600;
+}
+
+.card{
+  @include media(desktop) {
     width: 100%;
+    margin: calc(#{$spacing-unit} / 4);
+  }
 
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.164);
+  width: 100%;
+
+  box-sizing: border-box;
+
+  figure {
+    width: 100%;
+    height: auto;
     box-sizing: border-box;
-    figure {
-      width: 100%;
-      height: auto;
-      box-sizing: border-box;
-      background-size: cover;
-      background-position: center;
+    background-size: cover;
+    background-position: center;
+  }
+
+  > div, p, h1, h2, h3 {
+    padding: calc(#{$spacing-unit} / 2);
+  }
+
+}
+
+.admission{
+  > div{
+    margin-left: auto;
+    margin-right: auto;
+    @include media(desktop){
+    width: 90%;
+  }
+    div{
+    display: inline-block;
+    @include media(desktop){
+    width: 48%;
     }
-    > div {
-      padding: calc(#{$spacing-unit} / 2);
-    }
+    text-align: center;
+    padding: $spacing-unit;
+  }
   }
 }
