@@ -1,0 +1,75 @@
+---
+background: gallery
+title: Gallery
+layout: page
+type: main
+image: /assets/gallery.jpg
+---
+
+{% if paginator.page > 1 %}
+
+
+<div class="gallery-container">
+    <ul class="post-list">
+        {% assign albums = paginator.gallery | sort: 'date' | reverse %}
+            {% for post in albums %}
+         <li class="card">
+            <a href="{{ post.url }}">
+                <div class="grid-post-image"><img  src="/assets/gallery/uploads/{{post.album_id}}/cover.jpg"></div>
+                <p class="grid-post-head">{{ post.title }}</p>
+                <p class="sub-text">{{ post.date | date: "%-d %B %Y" }}</p>
+                <p>View Photos <span></span> </p>
+            </a>
+            </li>
+           
+            {% endfor %}
+    </ul>
+    {%- if albums.size > 9 -%}
+    <div style="text-align: center;">
+        <a class="button-link" href="/gallery/page/2">View More</a>
+    </div>
+    </div>
+    {%- endif -%}
+
+<div class="pagination">
+
+    {% if paginator.previous_page %}
+
+    {% if paginator.previous_page > 1 %}
+    <a href="/page/" class="first">First</a>
+    {% else %}
+    <a class="first" style="opacity: 0;">First</a>
+    {% endif %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">{{ paginator.previous_page }}</a>
+    {% else %}
+    <a class="first" style="opacity: 0;">First</a>
+    <a class="previous" style="opacity: 0;">0</a>
+    {% endif %}
+
+
+    <span class="page_number ">{{ paginator.page }}</span>
+
+
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">{{ paginator.next_page }}</a>
+
+
+    {% if paginator.next_page < paginator.total_pages %} <a href="/page/{{paginator.total_pages}}" class="last">Last</a>
+        {% else %}
+        <a class="first" style="opacity: 0;">Last</a>
+        {% endif %}
+
+        {% else %}
+        <a class="previous" style="opacity: 0;">
+            0
+        </a>
+        <a class="first" style="opacity: 0;">Last</a>
+        {% endif %}
+
+
+</div>
+
+</div>
+{% else %}
+<script>window.location = "/"</script>
+{% endif %}
