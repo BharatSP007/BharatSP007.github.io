@@ -348,7 +348,7 @@
     display: block;
   }
 }
-.programmes-container{
+.programmes-container {
   margin-top: calc(#{$spacing-unit} * 2);
   margin-bottom: calc(#{$spacing-unit} * 2);
 
@@ -439,7 +439,7 @@
   background-size: cover;
   height: 200px;
   overflow: hidden;
-  img{
+  img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -448,14 +448,12 @@
   }
   @include media(desktop) {
     height: 200px;
-
-   
   }
 }
-.gallery-container{
- @include media(desktop){
-  margin: 0 calc(#{$spacing-unit} * 3)
- }
+.gallery-container {
+  @include media(desktop) {
+    margin: 0 calc(#{$spacing-unit} * 3);
+  }
 }
 .post-list {
   display: grid;
@@ -474,27 +472,47 @@
     margin-left: 0;
     margin-right: 0;
     background-color: $brand-color;
-
+    padding-bottom: $spacing-unit;
+    p {
+      span::before{
+        color: $background-color;
+        display: inline-block;
+        font-family: 'Material Icons Round';
+        content: '\e5c8';
+        transition: transform 100ms;
+        font-weight: 600;
+        height: 100%;
+        vertical-align:bottom;
+      }
+    }
     @include media(desktop) {
-     
       vertical-align: text-top;
-      height: 300px;
+      height: fit-content;
       overflow: hidden;
       position: relative;
       transform: translateY(0);
       transition: transform 100ms;
+
       &:hover {
-        .grid-post-image{
-          img{
-          transform: scale(1.1);
-          transition: transform 100ms;
-        }}
+        a {
+          p {
+            >span::before{
+              transform: translateX(100%);
+            }
+          }
+        }
+        .grid-post-image {
+          img {
+          //  transform: scale(1.1);
+            transition: transform 100ms;
+          }
+        }
       }
     }
     p {
       margin: 0;
       padding: 4px $spacing-unit;
-      &:not(.grid-post-head) {
+      &.sub-text {
         font-size: $base-font-size * 0.8;
       }
     }
@@ -852,7 +870,7 @@
     @include media-max(mobile) {
       width: 100%;
     }
-    iframe{
+    iframe {
       width: 100%;
     }
   }
@@ -877,32 +895,30 @@
   grid: auto-flow;
   @include media(desktop) {
     grid-auto-columns: minmax(0, 1fr);
-   
+
     column-gap: $spacing-unit;
   }
-  
-    .row1 {
-      @include media(desktop) {
+
+  .row1 {
+    @include media(desktop) {
       grid-row: 1/2;
-      }
     }
-    .row2 {
-      @include media(desktop) {
+  }
+  .row2 {
+    @include media(desktop) {
       grid-row: 2/2;
-      }
     }
-  
- 
+  }
 }
 
-.external-link{
-  content: "\e89e"; 
+.external-link {
+  content: "\e89e";
   font-family: "Material Icons Round", sans-serif;
   color: $background-color;
   font-weight: 600;
 }
 
-.card{
+.card {
   @include media(desktop) {
     width: 100%;
     margin: calc(#{$spacing-unit} / 4);
@@ -921,26 +937,29 @@
     background-position: center;
   }
 
-  > div, p, h1, h2, h3 {
+  > div,
+  p,
+  h1,
+  h2,
+  h3 {
     padding: calc(#{$spacing-unit} / 2);
   }
-
 }
 
-.admission{
-  > div{
+.admission {
+  > div {
     margin-left: auto;
     margin-right: auto;
-    @include media(desktop){
-    width: 90%;
-  }
-    div{
-    display: inline-block;
-    @include media(desktop){
-    width: 48%;
+    @include media(desktop) {
+      width: 90%;
     }
-    text-align: center;
-    padding: $spacing-unit;
-  }
+    div {
+      display: inline-block;
+      @include media(desktop) {
+        width: 48%;
+      }
+      text-align: center;
+      padding: $spacing-unit;
+    }
   }
 }

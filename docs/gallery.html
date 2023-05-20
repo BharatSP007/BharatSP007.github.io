@@ -13,7 +13,8 @@ image: /assets/gallery.jpg
         <a href="{{ post.url }}">
             <div class="grid-post-image"><img  src="/assets/gallery/uploads/{{post.album_id}}/cover.jpg"></div>
             <p class="grid-post-head">{{ post.title }}</p>
-            <p>{{ post.date | date: "%-d %B %Y" }}</p>
+            <p class="sub-text">{{ post.date | date: "%-d %B %Y" }}</p>
+            <p>View Photos <span></span> </p>
         </a>
         </li>
         {% endif %}
