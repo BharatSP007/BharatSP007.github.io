@@ -54,12 +54,12 @@
   #lightbox-thumbnails {border: 1px solid transparent;
 
     height: 100px;
-    width: 60%;
+    max-width: 60%;
     position: absolute;
     bottom: 10px;
-    left: calc(20% - 50px);
+    left: 50%;
     padding: 0 50px 0 50px;
-   
+    
     @include media-max(mobile){
       bottom: 50px;
       width: 100%;
@@ -67,7 +67,7 @@
       padding: 0;
     }
 
-    transform: scale(0.2);
+    transform: translateX(-50%) scale(0.2);
     transition: transform 300ms ease-in-out 500ms;
     button {
         display: block;
@@ -126,7 +126,7 @@
 
     &:hover {
       transition: transform 300ms ease-in-out 0s;
-      transform: scale(1);
+      transform:  translateX(-50%) scale(1);
       &>button{
         opacity: 1;
         transition: opacity 300ms ease-in-out 0s;
