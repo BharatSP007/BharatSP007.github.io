@@ -1,6 +1,6 @@
 ---
 layout: album
-title: Women's-day
+title: Women's day
 album_id: womens-day
 background: album
 location: internal
