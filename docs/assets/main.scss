@@ -986,14 +986,13 @@
     margin-right: auto;
     @include media(desktop) {
       width: 90%;
+    display: flex;
     }
     div {
-      display: inline-block;
-      @include media(desktop) {
-        width: 48%;
-      }
+  
+      margin-bottom: $spacing-unit;
       text-align: center;
-      padding: $spacing-unit;
+      padding: $spacing-unit calc(#{$spacing-unit} /2 );
     }
   }
 }
