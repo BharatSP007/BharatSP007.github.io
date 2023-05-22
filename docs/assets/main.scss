@@ -101,11 +101,13 @@
   text-align: center;
 }
 .marquee-container {
+  @include media(tablet, desktop){
   width: fit-content;
   display: grid;
   grid: auto-flow;
   margin-left: auto;
   margin-right: auto;
+  }
 }
 
 .marquee-strip {
@@ -123,10 +125,12 @@
   }
 }
 .marquee-title {
-  padding: 8px;
+  @include media(tablet, desktop){
   width: fit-content;
   grid-row: 1/1;
   grid-column: 1/2;
+  }
+  padding: 8px;
   background-color: $brand-color-secondary;
   color: $background-color;
 }
