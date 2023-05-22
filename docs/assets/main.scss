@@ -52,18 +52,22 @@
 }
 @keyframes marquee-anim {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-150%);
   }
 }
 .marquee {
+  left: 100%;
+  position: relative;
   animation-name: marquee-anim;
-  animation-duration: 20s;
+  animation-duration: 30s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  width: fit-content;
+  
+    width: fit-content;
+  
   &:hover {
     animation-play-state: paused;
   }
@@ -374,7 +378,7 @@
 
 .programmes-item {
   position: relative;
-  
+
   @include media(desktop) {
     min-width: 300px;
     width: 100%;
@@ -382,7 +386,7 @@
     box-sizing: border-box;
     height: 500px;
   }
- 
+
   box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.164);
   width: 100%;
 
@@ -394,34 +398,32 @@
     background-size: cover;
     background-position: center;
   }
-.programme-dets {
+  .programme-dets {
     padding: calc(#{$spacing-unit} / 2);
   }
-  .programme-data{
+  .programme-data {
     display: flex;
     @include media(desktop) {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
     }
     width: auto;
-    div{
+    div {
       padding: 8px;
-     
     }
-    .programme-seats{
+    .programme-seats {
       background-color: $brand-color-secondary;
       color: $background-color;
       width: 35%;
     }
-    .programme-fees{
+    .programme-fees {
       background-color: $brand-color;
       color: $background-color;
       width: 65%;
     }
   }
-  
 }
 
 .about-container {
@@ -502,15 +504,15 @@
     background-color: $brand-color;
     padding-bottom: $spacing-unit;
     p {
-      span::before{
+      span::before {
         color: $background-color;
         display: inline-block;
-        font-family: 'Material Icons Round';
-        content: '\e5c8';
+        font-family: "Material Icons Round";
+        content: "\e5c8";
         transition: transform 100ms;
         font-weight: 600;
         height: 100%;
-        vertical-align:bottom;
+        vertical-align: bottom;
       }
     }
     @include media(desktop) {
@@ -524,14 +526,14 @@
       &:hover {
         a {
           p {
-            >span::before{
+            > span::before {
               transform: translateX(100%);
             }
           }
         }
         .grid-post-image {
           img {
-          //  transform: scale(1.1);
+            //  transform: scale(1.1);
             transition: transform 100ms;
           }
         }
@@ -889,17 +891,17 @@
 }
 
 .visit-directions {
-  @include media(desktop){
-  display: flex;
+  @include media(desktop) {
+    display: flex;
   }
   div {
-    @include media(desktop){
-    margin: 1%;
-    display: inline-block;
-    width: 46%;
-    height: 100%;
+    @include media(desktop) {
+      margin: 1%;
+      display: inline-block;
+      width: 46%;
+      height: 100%;
     }
-    
+
     iframe {
       width: 100%;
     }
@@ -907,8 +909,8 @@
 }
 
 .quick-query {
-  @include media(desktop){
-  text-align: center;
+  @include media(desktop) {
+    text-align: center;
   }
   padding: $spacing-unit 0 $spacing-unit 0;
   form {
