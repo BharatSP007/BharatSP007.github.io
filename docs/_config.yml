@@ -30,9 +30,9 @@ description: >- # this means to ignore newlines until "baseurl:"
   Sree Narayana Guru College of Advanced Studies, Mezhuveli, is a centre of excellence in higher learning affiliated to the Mahatma Gandhi University, Kottayam.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.sngcasmezhuveli.in" # the base hostname & protocol for your site, e.g. http://example.com
-facebook_username: snmezhuveli
-instagram_username: snmezhuveli
-youtube_username: snmezhuveli
+facebook_username: sngcasmezhuveli
+instagram_username: sngcasmezhuveli
+#youtube_username: snmezhuveli
 
 # Build settings
 theme: minima
