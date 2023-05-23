@@ -65,3 +65,5 @@ defaults:
       path: "assets/gallery/uploads"
     values:
       album: true
+sass:
+  style: compressed
