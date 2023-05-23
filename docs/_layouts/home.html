@@ -110,7 +110,7 @@ title: Home
         {% for post in albums %}
         {% if forloop.index <= 3 %}  <li class="card">
             <a href="{{ post.url }}">
-                <div class="grid-post-image"><img  src="/assets/gallery/uploads/{{post.album_id}}/cover.jpg"></div>
+                <div class="grid-post-image"><img  src="/assets/gallery/uploads/{{post.album_id}}/cover.jpg" alt=""></div>
                 <p class="grid-post-head">{{ post.title }}</p>
                 <p class="sub-text">{{ post.date | date: "%-d %B %Y" }}</p>
                 <p>View Photos <span></span> </p>
