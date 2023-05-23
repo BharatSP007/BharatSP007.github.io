@@ -663,6 +663,15 @@
       background-image: url("/assets/facilities.jpg");
     }
   }
+  &.results {
+    background-image: url("/assets/results-mob.jpg");
+    @include media(tablet) {
+      background-image: url("/assets/results-tab.jpg");
+    }
+    @include media(desktop) {
+      background-image: url("/assets/results.jpg");
+    }
+  }
 }
 
 .pic-text-block {
@@ -998,5 +1007,17 @@
       text-align: center;
       padding: $spacing-unit calc(#{$spacing-unit} /2 );
     }
+  }
+}
+
+.news-container{
+  margin-top: calc(#{$spacing-unit} * 2);
+  margin-bottom: calc(#{$spacing-unit} * 2);
+
+  @include media(desktop) {
+    margin: 0 calc(#{$spacing-unit} * 3);
+  }
+  ul {
+    list-style: unset;
   }
 }
