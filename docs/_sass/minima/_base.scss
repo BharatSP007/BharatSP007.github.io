@@ -27,8 +27,11 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  
 }
-
+html{
+  scroll-padding-top: $spacing-unit * 4;
+}
 
 
 /**
@@ -104,11 +107,11 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $brand-color;
+  color: $brand-color-secondary;
   text-decoration: none;
 
   &:visited {
-    color: darken($brand-color, 15%);
+    color: $brand-color-secondary;
   }
 
   &:hover {

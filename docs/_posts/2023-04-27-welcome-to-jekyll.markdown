@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Welcome to Jekyll"
-image: "/assets/college.jpg"
+image: "/assets/images/college.jpg"
 type: blog
 date:   2023-04-27 18:16:35 +0530
 categories: blog article

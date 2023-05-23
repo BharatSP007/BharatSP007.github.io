@@ -15,10 +15,10 @@
 .head-carousel {
   position: relative;
   overflow: hidden;
-  // background-image: url("/assets/college-mob.jpg");
+  // background-image: url("/assets/images/college-mob.jpg");
   background-position: top;
   @include media(desktop) {
-    // background-image: url("/assets/college.jpg");
+    // background-image: url("/assets/images/college.jpg");
     background-position: center;
   }
 
@@ -27,7 +27,7 @@
   height: 600px;
   @include media-max(mobile) {
     height: 400px;
-    //background-image: url("/assets/college-mob.jpg");
+    //background-image: url("/assets/images/college-mob.jpg");
   }
   margin-left: calc(#{$spacing-unit} / -2);
   margin-right: calc(#{$spacing-unit} / -2);
@@ -158,7 +158,7 @@
   color: $background-color;
   text-align: center;
   overflow: hidden;
-  //background-image: url("/assets/sree-narayanaguru-college-of-advanced-studies-ground-floor-corridor.jpg");
+  //background-image: url("/assets/images/sree-narayanaguru-college-of-advanced-studies-ground-floor-corridor.jpg");
   //background-size: cover;
   // background-position: center;
   //background-blend-mode: multiply;
@@ -592,84 +592,84 @@
 
 .page-header-image {
   &.contact {
-    background-image: url("/assets/contact-mob.jpg");
+    background-image: url("/assets/images/contact-mob.jpg");
     @include media(tablet) {
-      background-image: url("/assets/contact-tab.jpg");
+      background-image: url("/assets/images/contact-tab.jpg");
     }
     @include media(desktop) {
-      background-image: url("/assets/contact.jpg");
+      background-image: url("/assets/images/contact.jpg");
     }
   }
   &.gallery {
-    background-image: url("/assets/gallery-mob.jpg");
+    background-image: url("/assets/images/gallery-mob.jpg");
     @include media(tablet) {
-      background-image: url("/assets/gallery-tab.jpg");
+      background-image: url("/assets/images/gallery-tab.jpg");
     }
     @include media(desktop) {
-      background-image: url("/assets/gallery.jpg");
+      background-image: url("/assets/images/gallery.jpg");
     }
   }
   &.programmes {
-    background-image: url("/assets/programmes-mob.jpg");
+    background-image: url("/assets/images/programmes-mob.jpg");
     @include media(tablet) {
-      background-image: url("/assets/programmes-tab.jpg");
+      background-image: url("/assets/images/programmes-tab.jpg");
     }
     @include media(desktop) {
-      background-image: url("/assets/programmes.jpg");
+      background-image: url("/assets/images/programmes.jpg");
     }
   }
   &.about {
-    background-image: url("/assets/about-mob.jpg");
+    background-image: url("/assets/images/about-mob.jpg");
     @include media(tablet) {
-      background-image: url("/assets/about-tab.jpg");
+      background-image: url("/assets/images/about-tab.jpg");
     }
     @include media(desktop) {
-      background-image: url("/assets/about.jpg");
+      background-image: url("/assets/images/about.jpg");
     }
   }
   &.fees {
-    background-image: url("/assets/fees-mob.jpg");
+    background-image: url("/assets/images/fees-mob.jpg");
     @include media(tablet) {
-      background-image: url("/assets/fees-tab.jpg");
+      background-image: url("/assets/images/fees-tab.jpg");
     }
     @include media(desktop) {
-      background-image: url("/assets/fees.jpg");
+      background-image: url("/assets/images/fees.jpg");
     }
   }
   &.error404 {
-    background-image: url("/assets/error404-mob.jpg");
+    background-image: url("/assets/images/error404-mob.jpg");
     @include media(tablet) {
-      background-image: url("/assets/error404-tab.jpg");
+      background-image: url("/assets/images/error404-tab.jpg");
     }
     @include media(desktop) {
-      background-image: url("/assets/error404.jpg");
+      background-image: url("/assets/images/error404.jpg");
     }
   }
   &.album {
-    background-image: url("/assets/album-mob.jpg");
+    background-image: url("/assets/images/album-mob.jpg");
     @include media(tablet) {
-      background-image: url("/assets/album-tab.jpg");
+      background-image: url("/assets/images/album-tab.jpg");
     }
     @include media(desktop) {
-      background-image: url("/assets/album.jpg");
+      background-image: url("/assets/images/album.jpg");
     }
   }
   &.facilities {
-    background-image: url("/assets/facilities-mob.jpg");
+    background-image: url("/assets/images/facilities-mob.jpg");
     @include media(tablet) {
-      background-image: url("/assets/facilities-tab.jpg");
+      background-image: url("/assets/images/facilities-tab.jpg");
     }
     @include media(desktop) {
-      background-image: url("/assets/facilities.jpg");
+      background-image: url("/assets/images/facilities.jpg");
     }
   }
   &.results {
-    background-image: url("/assets/results-mob.jpg");
+    background-image: url("/assets/images/results-mob.jpg");
     @include media(tablet) {
-      background-image: url("/assets/results-tab.jpg");
+      background-image: url("/assets/images/results-tab.jpg");
     }
     @include media(desktop) {
-      background-image: url("/assets/results.jpg");
+      background-image: url("/assets/images/results.jpg");
     }
   }
 }

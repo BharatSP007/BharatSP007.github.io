@@ -6,9 +6,6 @@
 }
 .site-header {
   line-height: $narrow-line-height;
-  * {
-    //border: 1px solid red;
-  }
   height: $spacing-unit * 1.865;
   width: 100%;
   // Positioning context for the mobile navigation icon
@@ -424,7 +421,7 @@
   transform: scale(0.5);
 }
 /*.site-title::before {
-  content: url("/assets/logo.png");
+  content: url("/assets/images/logo.png");
 	display: inline-block;
 	position: relative;
 	width: 37px;

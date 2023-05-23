@@ -3,18 +3,18 @@
   description: Enables understanding of commerce, especially the discipline that involves the use of software technology application.
   fees-per-semester: "11,250"
   seats: 60
-  image: /assets/com-appl.jpg
+  image: /assets/images/com-appl.jpg
 
 - title: B.Com. Co-operation
   url: /academics/b-com-co-op
   description: Helps the students improve their understanding of management in the co-operative economic model.
   fees-per-semester: "9,000"
   seats: 60
-  image: /assets/co-op.jpg
+  image: /assets/images/co-op.jpg
 
 - title: B.A. Sociology
   url: /academics/ba-sociology
   description: Deals with the study of society with key focus on analyzing how societies evolve, persist, and ultimately undergo transformations.
   fees-per-semester: "9,000"
   seats: 60
-  image: /assets/sociology.jpg
+  image: /assets/images/sociology.jpg
