@@ -1,4 +1,5 @@
 var $ = document.getElementById.bind(document);
+
 function setNav() {
   var top =
     (window.pageYOffset || document.scrollTop) - (document.clientTop || 0);
@@ -19,6 +20,7 @@ document.addEventListener("scroll", function () {
   setNav();
 });
 document.addEventListener("DOMContentLoaded", function () {
+  setMarqueeSpeed();
   $("nav-button").addEventListener("click", function () {
     let sideNav = $("right");
     let menuIcon = $("menu-icon");
@@ -68,5 +70,13 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         );
     });
+  }
+
+  function setMarqueeSpeed() {
+    let marq = $("marquee");
+    if (marq) {
+      let width = marq.offsetWidth;
+      marq.style.animationDuration = `${width / 50}s`;
+    }
   }
 });

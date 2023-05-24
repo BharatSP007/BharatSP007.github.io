@@ -65,5 +65,9 @@ defaults:
       path: "assets/gallery/uploads"
     values:
       album: true
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/og-card.jpg
 sass:
   style: compressed

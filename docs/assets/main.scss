@@ -52,20 +52,32 @@
 }
 @keyframes marquee-anim {
   0% {
-    transform: translateX(0%);
+    
+    transform: translateX(101vw);
   }
   100% {
-    transform: translateX(-150%);
+    transform: translateX(-101%);
   }
 }
+@include media(desktop) {
+  @keyframes marquee-anim {
+    0% {
+      transform: translateX(51vw);
+    }
+    100% {
+      transform: translateX(-101%);
+    }
+  }
+}
+
 .marquee {
-  left: 100%;
+  left: 0%;
   position: relative;
   animation-name: marquee-anim;
-  animation-duration: 30s;
+  animation-duration: 25s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  
+  min-width: 100%;
     width: fit-content;
   
   &:hover {
@@ -118,7 +130,7 @@
   white-space: nowrap;
   grid-row: 1/1;
   grid-column: 2/2;
-  font-weight: 700;
+  font-weight: 500;
   cursor: default;
   @include media(desktop) {
     width: 50vw;
@@ -133,6 +145,7 @@
   padding: 8px;
   background-color: $brand-color-secondary;
   color: $background-color;
+  font-weight: 700;
 }
 .welcome {
   margin-top: calc(#{$spacing-unit} * 2);
