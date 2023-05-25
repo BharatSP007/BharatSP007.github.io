@@ -20,7 +20,7 @@
 
         <div id="thumb-list">
 
-
+            <div id="thumb-panel">
             {%- if page.location == "internal" -%}
             {% assign image_files = site.static_files | where: "album", true %}
             {% for image in image_files %}
@@ -51,6 +51,7 @@
 
             {% endfor %}
             {% endif %}
+        </div>
         </div>
         <button id="thumb-prev"><i class="material-icons-round">navigate_before</i></button>
         <button id="thumb-next"><i class="material-icons-round">navigate_next</i></button>
